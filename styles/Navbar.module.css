@@ -1,0 +1,21 @@
+.navbar_toggle_hide {
+  display: none;
+}
+
+@media only screen and (max-width: 1026px) {
+  .navbar_toggle_hide {
+    display: block;
+  }
+}
+
+/* .backgroundcolor{
+    /* transparent */
+/* background-color: #020202d8; */
+/* background-blend-mode:overlay 
+        
+}
+ .links{
+    color: white;
+    font-size: 1.5rem;
+    linkColor: white;
+}*/

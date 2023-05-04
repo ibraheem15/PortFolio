@@ -1,4 +1,4 @@
-.container {
+/* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -89,3 +89,19 @@
     flex-direction: column;
   }
 }
+.navbar_toggle_hide {
+  display: none;
+}
+
+@media only screen and (max-width: 1026px) {
+  .navbar_toggle_hide {
+      display: block;
+  }
+} */
+
+/* .backgroundcolor{
+  /* transparent */
+  /* background-color: #ffffff30; */
+  /* background-color: #f7f7f799; 
+      
+}  */
