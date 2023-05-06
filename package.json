@@ -7,9 +7,19 @@
   },
   "dependencies": {
     "@nextui-org/react": "^1.0.0-beta.12",
+    "@react-three/drei": "^9.66.3",
+    "@react-three/fiber": "^8.13.0",
+    "@types/styled-components": "^5.1.26",
+    "@types/three": "^0.152.0",
     "aos": "^2.3.4",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.10",
+    "three": "^0.152.2"
+  },
+  "devDependencies": {
+    "@types/node": "20.1.0",
+    "typescript": "5.0.4"
   }
 }
