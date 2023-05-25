@@ -17,8 +17,8 @@ function NavBar() {
         $$navbarBackgroundColor: "transparent",
         $$navbarBlurBackgroundColor: "transparent",
       }}
-      data-aos="fade-down"
-      data-aos-duration="1000"
+      // data-aos="fade-left"
+      // data-aos-duration="1000"
 
     >
       <Navbar.Brand>

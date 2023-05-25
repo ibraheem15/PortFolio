@@ -1,0 +1,101 @@
+/* * Hello and Computer Section */
+
+.FirstView {
+  display: flex;
+}
+
+.Homeintro {
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  width: 650px;
+  margin-left: 170px;
+  margin-top: 100px;
+  padding-bottom: 100px;
+  /* padding-right: 400px; */
+  flex: 1;
+  /* background-color: #1ac8bf; */
+}
+
+.Homeh1 {
+  font-size: 4rem;
+  font-weight: 1200;
+  color: #ffffff;
+}
+
+.Homeh3 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #aaaaaa;
+  width: 500px;
+}
+
+.link_contactme {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: all 0.38s ease-in-out;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 4em;
+  margin: -4em;
+}
+
+.computer {
+  /* background-color: #edbc35; */
+  flex: 2;
+}
+
+.contactMe {
+}
+
+@media (max-width: 768px) {
+  .Homeh1 {
+    font-size: 3rem;
+  }
+  .Homeh3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .Homeh1 {
+    font-size: 2rem;
+  }
+  .Homeh3 {
+    font-size: 1rem;
+  }
+  .Homeintro {
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 900px;
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  .computer {
+    flex: auto;
+    padding-left: -19px;
+  }
+  .FirstView {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .buttonsCss {
+    padding-left: 20px;
+  }
+  .contactMe {
+    margin-left: 130px;
+  }
+  .loading {
+    margin-left: -230px;
+  }
+}
+
+/* ! ------------END--------- */
+
+/* * What i do section */

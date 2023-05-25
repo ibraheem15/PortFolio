@@ -2,6 +2,9 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import React, { useEffect, useState, useRef } from "react";
 import * as THREE from "three";
 import { loadGLTFModel } from "./model";
+import { Loading } from "@nextui-org/react";
+import styles from "./Home.module.css";
+
 
 const Computer: React.FC = () => {
   const refBody = useRef<HTMLDivElement>(null);
@@ -18,6 +21,7 @@ const Computer: React.FC = () => {
   );
   const [scene] = useState(new THREE.Scene());
   const [_controls, setControls] = useState<any>();
+
 
   const easeOutCirc = (t: number) => {
     return Math.sqrt(t - Math.pow(t - 1, 4));
@@ -39,10 +43,18 @@ const Computer: React.FC = () => {
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
 
-      const scale = scH * 0.08 * 0.5 * 0.6;
+      
+      var scale = scH * 0.08 * 0.5 * 0.6;
+      if (window.innerWidth > 600) {
+        scale = scH * 0.08 * 0.5 * 0.6;
+      } else {
+        scale = scH * 0.08 * 0.5 * 1;
+      }
+      // var scale = scH * 0.08 * 0.5 * 0.6;
+
       const camera = new THREE.OrthographicCamera(
-        -scale +4,
-        scale - 4 - 4,
+        -scale + 5,
+        scale - 4 - 4, //moves the camera to right if -10
         scale - 3 - 4.5,
         -scale / 4.5,
         1, //changed
@@ -99,7 +111,16 @@ const Computer: React.FC = () => {
 
   return (
     <div ref={refBody} style={{ width: "100%", height: "100%" }}>
-      {loading && <div>loading</div>}
+      {loading && (
+        <Loading
+          color="primary"
+          size="xl"
+          css={{ paddingLeft: "430px", paddingTop: "230px" }}
+          className={styles.loading}
+        >
+          Loading
+        </Loading>
+      )}
     </div>
   );
 };
