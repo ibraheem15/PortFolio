@@ -83,7 +83,7 @@ const Services = ({ index, title, description, icon }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [isOpen, setIsOpen] = useState(false);
-
+ 
   const toggleDescription = () => {
     setIsOpen(!isOpen);
   };
