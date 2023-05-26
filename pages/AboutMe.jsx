@@ -35,50 +35,6 @@ const service = [
   },
 ];
 
-// const Services = ({ index, title, description, icon }) => {
-//   const ref = useRef(null);
-//   const isInView = useInView(ref);
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   const toggleDescription = () => {
-//     setIsOpen(!isOpen);
-//   };
-//   return (
-//     <ParallaxTilt
-//       tiltMaxAngleX={15}
-//       tiltMaxAngleY={15}
-//       className={styles.tilt}
-//       tiltReverse="true"
-//     >
-//       <motion.div
-//         className={styles.insidetilt}
-//         ref={ref}
-//         style={{
-//           transform: isInView ? "none" : "translateX(-200px)",
-//           opacity: isInView ? 1 : 0,
-//           transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${
-//             0.5 * index
-//           }s`,
-//         }}
-//       >
-//         <div
-//           options={{
-//             max: 45,
-//             scale: 1.02,
-//             speed: 500,
-//           }}
-//           className={styles.tiltDiv}
-//           onClick={toggleDescription}
-//         >
-//           <img src={icon} className={styles.icon} />
-//           <h5 className={styles.title}>{title}</h5>
-//           {isOpen && <p className={styles.description}>{description}</p>}
-//         </div>
-//       </motion.div>
-//     </ParallaxTilt>
-//   );
-// };
-
 const Services = ({ index, title, description, icon }) => {
   const ref = useRef(null);
   const isInView = useInView(ref,{once : true});

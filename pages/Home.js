@@ -7,6 +7,7 @@ import aboutMe from "./AboutMe";
 
 const components = { ComputerCanvas, aboutMe };
 
+
 export default function Home() {
   const [justify, setJustify] = React.useState("flex-start");
   const [width, setWidth] = useState(0);
