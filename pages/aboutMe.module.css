@@ -1,0 +1,59 @@
+.h1whatIdo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.cards {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+  margin-left: 220px;
+  margin-right: 220px;
+}
+
+.tilt {
+  /* xs:w-[250px] w-full */
+}
+.insidetilt {
+  /* @apply w-full p-[1px] rounded-[20px] shadow-card overflow-hidden bg-white green-pink-gradient  */
+  /* background: #fff; */
+  width: 200px;
+  background: linear-gradient(90deg, #00ff00 0%, #ff00ff 100%);
+  padding: 1px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.tiltDiv {
+  background: #1d2734;
+  border-radius: 20px;
+  padding: 5px 12px;
+  min-height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon {
+  /* w-16 h-16 object-contain */
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.title {
+  /* text-[20px font-bold text-white text-center */
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+
+
+/*  */
