@@ -1,5 +1,6 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -12,10 +13,13 @@
     "@types/styled-components": "^5.1.26",
     "@types/three": "^0.152.0",
     "aos": "^2.3.4",
+    "framer-motion": "^10.12.16",
     "lodash.debounce": "^4.0.8",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-parallax-tilt": "^1.7.142",
+    "react-tilt": "^1.0.2",
     "styled-components": "^5.3.10",
     "three": "^0.152.2"
   },

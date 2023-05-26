@@ -3,8 +3,9 @@ import styles from "./Home.module.css";
 import { Button, Spacer, Grid } from "@nextui-org/react";
 import ComputerCanvas from "./Computer";
 import React, { useEffect, useState, useLayoutEffect } from "react";
-import { debounce } from "lodash";
-import { Center } from "@react-three/drei";
+import aboutMe from "./AboutMe";
+
+const components = { ComputerCanvas, aboutMe };
 
 export default function Home() {
   const [justify, setJustify] = React.useState("flex-start");
@@ -116,14 +117,16 @@ export default function Home() {
           </Button>
         </div>
         <div className={styles.computer}>
-          <ComputerCanvas width={width} key={width} />
+          {/* <ComputerCanvas width={width} key={width} /> */}
+          <components.ComputerCanvas width={width} key={width} />
         </div>
       </section>
-      <section >
-        <div>
-          <h1 className="h1WhatIdo">Here is what I do</h1>
-        </div>
+      <section>
+          <components.aboutMe />
       </section>
+      <div>
+        <h1 className={styles.Homeh1}>Services</h1>
+      </div>
     </div>
   );
 }
