@@ -81,9 +81,9 @@ const service = [
 
 const Services = ({ index, title, description, icon }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref,{once : true});
   const [isOpen, setIsOpen] = useState(false);
- 
+
   const toggleDescription = () => {
     setIsOpen(!isOpen);
   };
@@ -103,7 +103,6 @@ const Services = ({ index, title, description, icon }) => {
           transition: `all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) ${
             0.5 * index
           }s`,
-          overflow: "hidden",
         }}
       >
         <motion.div
@@ -122,11 +121,11 @@ const Services = ({ index, title, description, icon }) => {
             initial={{ opacity: 0, maxHeight: 0 }}
             animate={{
               opacity: isOpen ? 1 : 0,
-              maxHeight: isOpen ? "120px" : "0",
-              paddingBottom: isOpen ? "10px" : "0",
+              maxHeight: isOpen ? "400px" : "0",
+              maxWidth: isOpen ? "400px" : "0",
+              padding: isOpen ? "20px" : "0",
             }}
-            transition={{ duration: 0.5 }}
-            
+            // transition={{ duration: 0.3 }}
           >
             {description}
           </motion.p>
