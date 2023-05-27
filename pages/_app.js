@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import { useRouter } from "next/router";
 import { createTheme, NextUIProvider } from "@nextui-org/react";
 import "../styles/globals.css";
+import "../styles/AboutMeExplain.css";
 import Layout from "../components/Layout";
 import Head from "next/head";
 import { useEffect } from "react";

@@ -4,9 +4,8 @@ import { Button, Spacer, Grid } from "@nextui-org/react";
 import ComputerCanvas from "./Computer";
 import React, { useEffect, useState, useLayoutEffect } from "react";
 import aboutMe from "./AboutMe";
-
-const components = { ComputerCanvas, aboutMe };
-
+import AboutMeExplain from "./AboutMeExplain";
+const components = { ComputerCanvas, aboutMe, AboutMeExplain };
 
 export default function Home() {
   const [justify, setJustify] = React.useState("flex-start");
@@ -123,10 +122,10 @@ export default function Home() {
         </div>
       </section>
       <section>
-          <components.aboutMe />
+        <components.aboutMe />
       </section>
       <div>
-        <h1 className={styles.Homeh1}>Services</h1>
+        <components.AboutMeExplain />
       </div>
     </div>
   );

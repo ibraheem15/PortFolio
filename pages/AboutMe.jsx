@@ -32,7 +32,7 @@ const service = [
     icon: "https://img.icons8.com/color/480/c-sharp-logo-2.png",
     description: "I am currently learning C#",
     // <img width="480" height="480" src="https://img.icons8.com/color/480/c-sharp-logo-2.png" alt="c-sharp-logo-2"/>
-  },
+  }
 ];
 
 const Services = ({ index, title, description, icon }) => {

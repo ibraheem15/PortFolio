@@ -14,6 +14,7 @@
     "@types/three": "^0.152.0",
     "aos": "^2.3.4",
     "framer-motion": "^10.12.16",
+    "gsap": "^3.11.5",
     "lodash.debounce": "^4.0.8",
     "next": "latest",
     "react": "18.2.0",
