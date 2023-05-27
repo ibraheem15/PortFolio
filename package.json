@@ -1,7 +1,6 @@
 {
   "homepage": "https://ibraheem15.github.io/PortFolio",
   "private": true,
-  "type": "module",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
