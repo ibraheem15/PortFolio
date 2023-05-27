@@ -1,7 +1,10 @@
 {
+  "homepage": "https://ibraheem15.github.io/PortFolio",
   "private": true,
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -26,6 +29,7 @@
   },
   "devDependencies": {
     "@types/node": "20.1.0",
+    "gh-pages": "^5.0.0",
     "typescript": "5.0.4"
   }
 }
