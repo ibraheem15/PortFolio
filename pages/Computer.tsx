@@ -1,10 +1,47 @@
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import React, { useEffect, useState, useRef } from "react";
 import * as THREE from "three";
-import { loadGLTFModel } from "./model";
+// import { loadGLTFModel } from "./model";
 import { Loading } from "@nextui-org/react";
 import styles from "./Home.module.css";
 
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
+export function loadGLTFModel(
+  scene,
+  glbPath,
+  options = { receiveShadow: true, castShadow: true }
+) {
+  const { receiveShadow, castShadow } = options;
+  return new Promise((resolve, reject) => {
+    const loader = new GLTFLoader();
+
+    loader.load(
+      glbPath,
+      (gltf) => {
+        const obj = gltf.scene;
+        obj.name = "dog";
+        obj.position.y = 0;
+        obj.position.x = 0;
+        obj.receiveShadow = receiveShadow;
+        obj.castShadow = castShadow;
+        scene.add(obj);
+
+        obj.traverse(function (child) {
+          // if (child.isMesh) {
+            child.castShadow = castShadow;
+            child.receiveShadow = receiveShadow;
+          // }
+        });
+        resolve(obj);
+      },
+      undefined,
+      function (error) {
+        reject(error);
+      }
+    );
+  });
+}
 
 const Computer: React.FC = () => {
   const refBody = useRef<HTMLDivElement>(null);
@@ -21,7 +58,6 @@ const Computer: React.FC = () => {
   );
   const [scene] = useState(new THREE.Scene());
   const [_controls, setControls] = useState<any>();
-
 
   const easeOutCirc = (t: number) => {
     return Math.sqrt(t - Math.pow(t - 1, 4));
@@ -43,7 +79,6 @@ const Computer: React.FC = () => {
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
 
-      
       var scale = scH * 0.08 * 0.5 * 0.6;
       if (window.innerWidth > 600) {
         scale = scH * 0.08 * 0.5 * 0.6;

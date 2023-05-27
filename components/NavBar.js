@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Navbar.module.css";
 
-import { Layout } from "../pages/Layout";
+// import { Layout } from "../pages/Layout";
 import { Navbar, Button, Link, Text, tuple } from "@nextui-org/react";
 import { useRouter } from "next/router";
 

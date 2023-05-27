@@ -383,3 +383,6 @@ li.three:nth-child(5)::before {
   --hue: 250;
   font-size: 3rem;
 }
+#FFF {
+  color: #888888;
+}

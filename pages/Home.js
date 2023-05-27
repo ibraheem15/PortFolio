@@ -127,6 +127,14 @@ export default function Home() {
       <div>
         <components.AboutMeExplain />
       </div>
+      <div style={{ textAlign: "center", marginTop: "2.5rem",marginBottom:"2rem" }}>
+        <p style={{
+          color: "#888888",
+          fontSize: "1.5rem",
+          fontWeight: "bold",
+          
+        }}>Created with  <img width="30" height="30" src="https://img.icons8.com/fluency/40/pixel-heart.png" alt="pixel-heart"/> by Ibraheem Rehman</p>
+      </div>
     </div>
   );
 }
