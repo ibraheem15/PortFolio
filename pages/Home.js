@@ -117,23 +117,49 @@ export default function Home() {
           </Button>
         </div>
         <div className={styles.computer}>
-          {/* <ComputerCanvas width={width} key={width} /> */}
           <components.ComputerCanvas width={width} key={width} />
         </div>
       </section>
-      <section>
+      <section
+        style={{
+          width: typeof window !== "undefined" ? window.innerWidth : "100%",
+        }}
+        
+      >
         <components.aboutMe />
       </section>
-      <div>
+      <div
+        style={{
+          width: typeof window !== "undefined" ? window.innerWidth : "100%",
+        }}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <components.AboutMeExplain />
       </div>
-      <div style={{ textAlign: "center", marginTop: "2.5rem",marginBottom:"2rem" }}>
-        <p style={{
-          color: "#888888",
-          fontSize: "1.5rem",
-          fontWeight: "bold",
-          
-        }}>Created with  <img width="30" height="30" src="https://img.icons8.com/fluency/40/pixel-heart.png" alt="pixel-heart"/> by Ibraheem Rehman</p>
+      <div
+        style={{
+          textAlign: "center",
+          marginTop: "2.5rem",
+          marginBottom: "2rem",
+        }}
+      >
+        <p
+          style={{
+            color: "#888888",
+            fontSize: "1.5rem",
+            fontWeight: "bold",
+          }}
+        >
+          Created with{" "}
+          <img
+            width="30"
+            height="30"
+            src="https://img.icons8.com/fluency/40/pixel-heart.png"
+            alt="pixel-heart"
+          />{" "}
+          by Ibraheem Rehman
+        </p>
       </div>
     </div>
   );

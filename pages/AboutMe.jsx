@@ -32,12 +32,12 @@ const service = [
     icon: "https://img.icons8.com/color/480/c-sharp-logo-2.png",
     description: "I am currently learning C#",
     // <img width="480" height="480" src="https://img.icons8.com/color/480/c-sharp-logo-2.png" alt="c-sharp-logo-2"/>
-  }
+  },
 ];
 
 const Services = ({ index, title, description, icon }) => {
   const ref = useRef(null);
-  const isInView = useInView(ref,{once : true});
+  const isInView = useInView(ref, { once: true });
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDescription = () => {
@@ -93,11 +93,23 @@ const Services = ({ index, title, description, icon }) => {
 
 const AboutMe = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
   return (
     <>
-      <h1 className={styles.h1whatIdo}>Here is what I do!</h1>
-      <motion.div className={styles.cards}>
+      <motion.h1
+        className={styles.h1whatIdo}
+        ref={ref}
+        style={{
+          transform: isInView ? "none" : "translateY(-200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
+        Here is what I do!
+      </motion.h1>
+      <motion.div
+        className={styles.cards}
+      >
         {service.map((service, index) => (
           <Services key={service.title} index={index} {...service} />
         ))}

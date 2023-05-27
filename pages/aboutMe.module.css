@@ -5,6 +5,8 @@
   align-items: center;
   margin-top: 60px;
   margin-bottom: 100px;
+  text-align: center;
+  /* width: 500px; */
 }
 
 .cards {
@@ -28,6 +30,15 @@
 @media screen and (max-width: 480px) {
   .cards {
     grid-template-columns: repeat(1, minmax(200px, 1fr));
+    width: 500px;
+  }
+  .h1whatIdo {
+    width: 500px;
+    align-items: center;
+    justify-content: center;
+  }
+  .insidetilt {
+    width: 150px;
   }
 }
 

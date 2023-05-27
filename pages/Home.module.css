@@ -80,6 +80,7 @@
   .computer {
     flex: auto;
     padding-left: -19px;
+    width: 500px;
   }
   .FirstView {
     display: flex;

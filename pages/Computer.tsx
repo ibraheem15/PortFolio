@@ -144,8 +144,20 @@ const Computer: React.FC = () => {
     }
   }, []);
 
+  const [width, setWidth] = useState(typeof window !== "undefined" && window.innerWidth);
+
+
   return (
-    <div ref={refBody} style={{ width: "100%", height: "100%" }}>
+    // <div ref={refBody} style={{ width: "100%", height: "100%" }}>
+    // if screen width is less than 600px, then widht is 500px else 100%
+    <div
+      ref={refBody}
+      style={{
+        width: width < 600 ? "500px" : "100%", //window not defined
+        height: "100%",
+      }}
+    >
+     {/* <div ref={refBody} className={styles.computer}> */}
       {loading && (
         <Loading
           color="primary"
