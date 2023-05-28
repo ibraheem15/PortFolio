@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Navbar.module.css";
 
 // import { Layout } from "../pages/Layout";
@@ -7,7 +7,21 @@ import { useRouter } from "next/router";
 
 function NavBar() {
   const { asPath } = useRouter();
-  const [click, setClick] = React.useState(false);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : "100%"
+  );
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <Navbar
       variant="static"
@@ -16,6 +30,10 @@ function NavBar() {
       css={{
         $$navbarBackgroundColor: "transparent",
         $$navbarBlurBackgroundColor: "transparent",
+      }}
+      style={{
+        // width: typeof window !== "500px" ? window.innerWidth : "100%",
+        width: windowWidth,
       }}
     >
       <Navbar.Brand>
@@ -57,7 +75,6 @@ function NavBar() {
           </Navbar.Link>
         )}
 
-        {/* <Navbar.Link href="/Projects">Projects</Navbar.Link> */}
         {asPath === "/Projects" ? (
           <Navbar.Link href="/Projects" isActive id="NavPro">
             Projects
@@ -68,7 +85,6 @@ function NavBar() {
           </Navbar.Link>
         )}
 
-        {/* <Navbar.Link href="/contact">Contact and Resume</Navbar.Link> */}
         {asPath === "/contact" ? (
           <Navbar.Link href="/contact" isActive id="NavCon">
             Contact and Resume

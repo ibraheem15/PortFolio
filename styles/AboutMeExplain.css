@@ -8,8 +8,10 @@
 }
 @media only screen and (max-width: 1000px) {
   .container {
-    border-radius: 0;
+    border-radius: 2.5rem;
     height: 69rem;
+    box-shadow: 0 0 10px rgba(122, 122, 122, 0.409);
+    background-blend-mode: darken;
   }
 }
 
@@ -23,6 +25,7 @@
 @media only screen and (max-width: 1000px) {
   .slider {
     height: 69rem;
+    box-shadow: 0 0 10px rgba(122, 122, 122, 0.409);
   }
 }
 .slider .box {
