@@ -16,6 +16,10 @@ function NavBar() {
         $$navbarBackgroundColor: "transparent",
         $$navbarBlurBackgroundColor: "transparent",
       }}
+      style={{
+        // width: typeof window !== "500px" ? window.innerWidth : "100%",
+        width: windowWidth,
+      }}
     >
       <Navbar.Brand>
         <Navbar.Toggle
