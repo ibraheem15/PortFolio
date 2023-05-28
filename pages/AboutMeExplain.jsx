@@ -117,33 +117,6 @@ const AboutMeExmplain = () => {
       window.addEventListener("touchend", mobile);
       slideRef.current = slide;
     })();
-
-    // const touchSlide = (() => {
-    //   let start, move, change, sliderWidth;
-
-    //   slider.addEventListener("touchstart", (e) => {
-    //     start = e.touches[0].clientX;
-    //     sliderWidth = slider.clientWidth / trail.length;
-    //   });
-
-    //   slider.addEventListener("touchmove", (e) => {
-    //     e.preventDefault();
-    //     move = e.touches[0].clientX;
-    //     change = start - move;
-    //   });
-
-    //   const mobile = () => {
-    //     if (change > sliderWidth / 4) {
-    //       slide("increase");
-    //     } else if (change * -1 > sliderWidth / 4) {
-    //       slide("decrease");
-    //     }
-    //     [start, move, change, sliderWidth] = [0, 0, 0, 0];
-    //   };
-
-    //   slider.addEventListener("touchend", mobile);
-    //   slideRef.current = slide;
-    // })();
   }, []);
 
   return (
