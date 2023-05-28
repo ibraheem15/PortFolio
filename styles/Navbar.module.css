@@ -8,6 +8,13 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .navbar_content {
+    width: 500px;
+    /* display: none; */
+  }
+}
+
 /* .backgroundcolor{
     /* transparent */
 /* background-color: #020202d8; */

@@ -17,9 +17,6 @@ function NavBar() {
         $$navbarBackgroundColor: "transparent",
         $$navbarBlurBackgroundColor: "transparent",
       }}
-      // data-aos="fade-left"
-      // data-aos-duration="1000"
-
     >
       <Navbar.Brand>
         <Navbar.Toggle
@@ -82,7 +79,12 @@ function NavBar() {
           </Navbar.Link>
         )}
       </Navbar.Content>
-      <Navbar.Collapse>
+      <Navbar.Collapse
+        style={{
+          width: typeof window !== "undefined" ? window.innerWidth : "100%",
+          backgroundColor: "transparent",
+        }}
+      >
         <Navbar.CollapseItem>
           <Link
             color="inherit"
@@ -127,7 +129,6 @@ function NavBar() {
             Contact and Resume
           </Link>
         </Navbar.CollapseItem>
-
       </Navbar.Collapse>
     </Navbar>
   );
