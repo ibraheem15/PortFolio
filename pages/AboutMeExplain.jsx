@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-// import "../styles/AboutMeExplain.css";
 import gsap from "gsap";
 
 const AboutMeExmplain = () => {
@@ -43,9 +42,7 @@ const AboutMeExmplain = () => {
       defaults: { duration: 0.6, ease: "power2.inOut" },
     });
     tl.from(".bg", { x: "-100%", opacity: 0 })
-      // .from("p", { opacity: 0 }, "-=0.3")
       .from(".bka", { opacity: 0, y: "30px" }, "-=0.3");
-    //   .from("button", { opacity: 0, y: "-40px" }, "-=0.8");
 
     const animate = () => tl.restart();
 
@@ -91,33 +88,62 @@ const AboutMeExmplain = () => {
     trail.forEach((cur) =>
       cur.addEventListener("click", (ev) => clickCheck(ev))
     );
-
     const touchSlide = (() => {
-      let start, move, change, sliderWidth;
+      let startX, moveX, changeX;
 
-      slider.addEventListener("touchstart", (e) => {
-        start = e.touches[0].clientX;
-        sliderWidth = slider.clientWidth / trail.length;
+      window.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
       });
 
-      slider.addEventListener("touchmove", (e) => {
-        e.preventDefault();
-        move = e.touches[0].clientX;
-        change = start - move;
+      window.addEventListener("touchmove", (e) => {
+        moveX = e.touches[0].clientX;
+        changeX = startX - moveX;
       });
 
       const mobile = () => {
-        if (change > sliderWidth / 4) {
-          slide("increase");
-        } else if (change * -1 > sliderWidth / 4) {
-          slide("decrease");
+        if (Math.abs(changeX) > 50) {
+          if (changeX > 0) {
+            // Handle swipe to the left (next slide)
+            slide("increase");
+          } else {
+            // Handle swipe to the right (previous slide)
+            slide("decrease");
+          }
         }
-        [start, move, change, sliderWidth] = [0, 0, 0, 0];
+
+        [startX, moveX, changeX] = [0, 0, 0];
       };
 
-      slider.addEventListener("touchend", mobile);
+      window.addEventListener("touchend", mobile);
       slideRef.current = slide;
     })();
+
+    // const touchSlide = (() => {
+    //   let start, move, change, sliderWidth;
+
+    //   slider.addEventListener("touchstart", (e) => {
+    //     start = e.touches[0].clientX;
+    //     sliderWidth = slider.clientWidth / trail.length;
+    //   });
+
+    //   slider.addEventListener("touchmove", (e) => {
+    //     e.preventDefault();
+    //     move = e.touches[0].clientX;
+    //     change = start - move;
+    //   });
+
+    //   const mobile = () => {
+    //     if (change > sliderWidth / 4) {
+    //       slide("increase");
+    //     } else if (change * -1 > sliderWidth / 4) {
+    //       slide("decrease");
+    //     }
+    //     [start, move, change, sliderWidth] = [0, 0, 0, 0];
+    //   };
+
+    //   slider.addEventListener("touchend", mobile);
+    //   slideRef.current = slide;
+    // })();
   }, []);
 
   return (
@@ -235,10 +261,12 @@ const AboutMeExmplain = () => {
                   Develop Applications using JavaFX and Scene Builder for GUI
                 </li>
                 <li class="three">
-                  Maintain and update existing Java applications to support new features
+                  Maintain and update existing Java applications to support new
+                  features
                 </li>
                 <li class="three">
-                  Manage Classes with Inheritance, Polymorphism, and Encapsulation to ensure data integrity
+                  Manage Classes with Inheritance, Polymorphism, and
+                  Encapsulation to ensure data integrity
                 </li>
               </ul>
               {/* <button>Check Now</button> */}
@@ -266,13 +294,16 @@ const AboutMeExmplain = () => {
                   Develop Applications using Windows Forms and WPF for GUI
                 </li>
                 <li class="three">
-                  Maintain and update existing C# applications to support new features
+                  Maintain and update existing C# applications to support new
+                  features
                 </li>
                 <li class="three">
-                  Manage Classes with Inheritance, Polymorphism, and Encapsulation to ensure data integrity
+                  Manage Classes with Inheritance, Polymorphism, and
+                  Encapsulation to ensure data integrity
                 </li>
                 <li class="three">
-                  Use Database First Approach to create C# Applications with SQL Server Database
+                  Use Database First Approach to create C# Applications with SQL
+                  Server Database
                 </li>
               </ul>
 
@@ -332,4 +363,3 @@ const AboutMeExmplain = () => {
 };
 
 export default AboutMeExmplain;
-

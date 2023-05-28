@@ -33,7 +33,6 @@
   align-items: center;
   overflow: hidden;
   position: relative;
-  /* padding-top: 2rem; */
 }
 @media only screen and (max-width: 650px) {
   .slider .box {
@@ -234,7 +233,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     margin-top: 2rem;
-    margin-right: 4rem
+    margin-right: 4rem;
   }
 }
 .slider .illustration div {
@@ -350,7 +349,7 @@
 ul {
   list-style-type: none;
   padding-left: 0;
-  text-align:justify
+  text-align: justify;
 }
 
 li.three {

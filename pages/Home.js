@@ -38,11 +38,9 @@ export default function Home() {
       >
         <div className={styles.Homeintro}>
           <h1 className={styles.Homeh1}>Hello👋.</h1>
-          {/* <h1 className="Homeh1"></h1> */}
-          {/* <h1 className="Homeh1"></h1> */}
           <h3 className={styles.Homeh3}>
             I'm <span style={{ color: "#3bfff5" }}>Ibraheem ur Rehman</span> 👨‍💻
-            Software Engineer, Footballer ⚽, Gamer 🎮 Always Learning 📖.
+            Software Engineer, Footballer ⚽, Gamer 🎮 & Always Learning 📖.
           </h3>
           <Spacer x={1.5} />
           <Grid.Container
@@ -142,6 +140,8 @@ export default function Home() {
           textAlign: "center",
           marginTop: "2.5rem",
           marginBottom: "2rem",
+          width: typeof window !== "undefined" ? window.innerWidth : "100%",
+
         }}
       >
         <p
