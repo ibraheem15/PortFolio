@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/Navbar.module.css";
 
 // import { Layout } from "../pages/Layout";
@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 
 function NavBar() {
   const { asPath } = useRouter();
-  const [click, setClick] = React.useState(false);
   return (
     <Navbar
       variant="static"
@@ -57,7 +56,6 @@ function NavBar() {
           </Navbar.Link>
         )}
 
-        {/* <Navbar.Link href="/Projects">Projects</Navbar.Link> */}
         {asPath === "/Projects" ? (
           <Navbar.Link href="/Projects" isActive id="NavPro">
             Projects
@@ -68,7 +66,6 @@ function NavBar() {
           </Navbar.Link>
         )}
 
-        {/* <Navbar.Link href="/contact">Contact and Resume</Navbar.Link> */}
         {asPath === "/contact" ? (
           <Navbar.Link href="/contact" isActive id="NavCon">
             Contact and Resume
@@ -79,12 +76,7 @@ function NavBar() {
           </Navbar.Link>
         )}
       </Navbar.Content>
-      <Navbar.Collapse
-        style={{
-          width: typeof window !== "undefined" ? window.innerWidth : "100%",
-          backgroundColor: "transparent",
-        }}
-      >
+      <Navbar.Collapse>
         <Navbar.CollapseItem>
           <Link
             color="inherit"
