@@ -1,30 +1,10 @@
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./Education.module.css";
 import { Image, gray, grayDark } from "@nextui-org/react";
-import { Grid, Card, Col, Row, Button, Text } from "@nextui-org/react";
+import { Grid, Card, Col, Text } from "@nextui-org/react";
 
 export default function education() {
-  const [svgWidth, setSvgWidth] = useState(795.39431);
-  const [svgHeight, setSvgHeight] = useState(574.03802);
-
-  useEffect(() => {
-    // Update the SVG dimensions when the component mounts or the window is resized
-    const handleResize = () => {
-      setSvgWidth(window.innerWidth);
-      setSvgHeight(window.innerHeight);
-    };
-
-    // Call the handleResize function initially and on window resize
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <>
       <section

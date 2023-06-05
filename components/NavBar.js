@@ -38,7 +38,7 @@ function NavBar() {
         }}
       >
         {asPath === "/" ? (
-          <Navbar.Link href="/" isActive id="NavHome">
+          <Navbar.Link href="/PortFolio" isActive id="NavHome">
             Home
           </Navbar.Link>
         ) : (

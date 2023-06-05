@@ -1,0 +1,33 @@
+.MainHeading {
+  font-size: 30px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  flex: 2;
+  padding-top: 11rem;
+  padding-right: 3rem;
+  margin-left: 19rem;
+  max-width: 800px;
+}
+
+.MainHeading h5 {
+  font-size: 20px;
+  font-weight: semi-bold;
+  color: #9b9a9a;
+}
+
+.MainIcon {
+  padding: 20px 50px;
+  flex: 1;
+}
+
+.svg {
+  width: 180%;
+  height: 100%;
+}
+
+.Projects {
+  margin: 20px;
+  /* color: #2c2c2c; */
+}
