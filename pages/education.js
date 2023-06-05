@@ -1,15 +1,37 @@
 import Link from "next/link";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Education.module.css";
-import { Image } from "@nextui-org/react";
+import { Image, gray, grayDark } from "@nextui-org/react";
+import { Grid, Card, Col, Row, Button, Text } from "@nextui-org/react";
 
 export default function education() {
+  const [svgWidth, setSvgWidth] = useState(795.39431);
+  const [svgHeight, setSvgHeight] = useState(574.03802);
+
+  useEffect(() => {
+    // Update the SVG dimensions when the component mounts or the window is resized
+    const handleResize = () => {
+      setSvgWidth(window.innerWidth);
+      setSvgHeight(window.innerHeight);
+    };
+
+    // Call the handleResize function initially and on window resize
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <section
         style={{
           display: "flex",
         }}
+        className={styles.FirstView}
       >
         <div className={styles.MainHatIcon}>
           <svg
@@ -19,6 +41,7 @@ export default function education() {
             width="795.39431"
             height="574.03802"
             viewBox="0 0 795.39431 574.03802"
+            className={styles.HatIcon}
           >
             <defs>
               <linearGradient
@@ -293,8 +316,8 @@ export default function education() {
           <h3>Basic Qualification and Ceritifications</h3>
           <p className={styles.HeadingP}>
             I actively participate in tech related activities and workshops as
-            well as do Leetcodes to praactice programming. Below are some of my
-            major certifications{" "}
+            well as do Leetcodes to practice programming. Below are some of my
+            major Degrees and Certifications.
           </p>
         </div>
       </section>
@@ -370,19 +393,110 @@ export default function education() {
                 </div>
               </div>
               <div className={styles.EducationCardTextContent}>
-                <p>
-                  I have Studies FSC Pre-Engineering at HITEC Taxila
-                </p>
+                <p>I have Studies FSC Pre-Engineering at HITEC Taxila</p>
                 <h3>Courses Taken:</h3>
                 <ul>
-                    <li>Physics</li>
-                    <li>Chemistry</li>
-                    <li>Mathematics</li>
+                  <li>Physics</li>
+                  <li>Chemistry</li>
+                  <li>Mathematics</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <div>
+          <h1
+            style={{
+              fontWeight: "550",
+              fontSmooth: "auto",
+              textAlign: "center",
+              fontSize: "2.65rem",
+              marginTop: "2.5rem",
+              color: "#fff",
+            }}
+          >
+            Certifications
+          </h1>
+        </div>
+        <Grid.Container gap={3} justify="center">
+          <Grid xs={12} sm={2.5}>
+            <Card css={{ w: "100%", h: "350px" }}>
+              <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                <Col>
+                  <Text h4 color="white">
+                    The Complete 2023 Web Development Bootcamp
+                  </Text>
+                </Col>
+              </Card.Header>
+              <Card.Body
+                className={styles.CardBody}
+                css={{
+                  // background: linear-gradient(to right, #2b5876, #4e4376);
+                  background: "linear-gradient(to right, #02aab0, #00cdac);",
+                }}
+              >
+                <Card.Image
+                  src="https://img-c.udemycdn.com/course/240x135/1565838_e54e_16.jpg"
+                  width="100%"
+                  height="100%"
+                  objectFit="contain"
+                  alt="Card example background"
+                  css={{ paddingTop: "50px" }}
+                />
+              </Card.Body>
+            </Card>
+          </Grid>
+          <Grid xs={12} sm={2.5}>
+            <Card css={{ w: "100%", h: "350px" }}>
+              <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                <Col>
+                  <Text h3 color="black">
+                  Unreal Engine 5 C++ Developer
+                  </Text>
+                </Col>
+              </Card.Header>
+              <Card.Body className={styles.CardBody}>
+                <Card.Image
+                  src="https://img-c.udemycdn.com/course/240x135/657932_c7e0_6.jpg"
+                  width="100%"
+                  height="100%"
+                  objectFit="contain"
+                  alt="Card example background"
+                  css={{ paddingTop: "50px" }}
+                />
+              </Card.Body>
+            </Card>
+          </Grid>
+          <Grid xs={12} sm={2.5}>
+            <Card css={{ w: "100%", h: "350px" }}>
+              <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
+                <Col>
+                  <Text h3 color="white">
+                    Intermediate Python
+                  </Text>
+                </Col>
+              </Card.Header>
+              <Card.Body
+                className={styles.CardBody}
+                css={{
+                  // background: linear-gradient(to right, #2b5876, #4e4376);
+                  background: "linear-gradient(to right, #348f50, #56b4d3)"
+                }}
+              >
+                <Card.Image
+                  src="https://skillspot.co/wp-content/uploads/2021/02/Datacamp-Review-Logo.png"
+                  width="100%"
+                  height="100%"
+                  objectFit="contain"
+                  alt="Card example background"
+                  css={{ paddingTop: "50px" }}
+                />
+              </Card.Body>
+            </Card>
+          </Grid>
+        </Grid.Container>
       </section>
     </>
   );

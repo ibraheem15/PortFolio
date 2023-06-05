@@ -126,5 +126,10 @@ button {
 
 /* ! Navbar End */
 
-/* * -------------Home----------- */
+/* * -------------Layout----------- */
 
+@media screen and (max-width: 500px) {
+  .layout {
+    width: 500px;
+  }
+}

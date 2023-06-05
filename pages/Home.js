@@ -119,10 +119,11 @@ export default function Home() {
         </div>
       </section>
       <section
-        style={{
-          width: typeof window !== "undefined" ? window.innerWidth : "100%",
-        }}
-        
+        style={
+          {
+            // width: typeof window !== "undefined" ? window.innerWidth : "100%",
+          }
+        }
       >
         <components.aboutMe />
       </section>
@@ -135,32 +136,7 @@ export default function Home() {
       >
         <components.AboutMeExplain />
       </div>
-      <div
-        style={{
-          textAlign: "center",
-          marginTop: "2.5rem",
-          marginBottom: "2rem",
-          width: typeof window !== "undefined" ? window.innerWidth : "100%",
-
-        }}
-      >
-        <p
-          style={{
-            color: "#888888",
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-          }}
-        >
-          Created with{" "}
-          <img
-            width="30"
-            height="30"
-            src="https://img.icons8.com/fluency/40/pixel-heart.png"
-            alt="pixel-heart"
-          />{" "}
-          by Ibraheem Rehman
-        </p>
-      </div>
+      
     </div>
   );
 }

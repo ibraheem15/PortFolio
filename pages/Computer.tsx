@@ -74,7 +74,7 @@ const Computer: React.FC = () => {
       });
 
       renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(scW + 10, scH + 10 + 10);
+      renderer.setSize(scW, scH + 10 + 10);
       renderer.outputEncoding = THREE.sRGBEncoding;
       container.appendChild(renderer.domElement);
       setRenderer(renderer);
@@ -85,8 +85,6 @@ const Computer: React.FC = () => {
       } else {
         scale = scH * 0.08 * 0.5 * 1;
       }
-      // var scale = scH * 0.08 * 0.5 * 0.6;
-
       const camera = new THREE.OrthographicCamera(
         -scale + 5,
         scale - 4 - 4, //moves the camera to right if -10
@@ -148,8 +146,6 @@ const Computer: React.FC = () => {
 
 
   return (
-    // <div ref={refBody} style={{ width: "100%", height: "100%" }}>
-    // if screen width is less than 600px, then widht is 500px else 100%
     <div
       ref={refBody}
       style={{
@@ -157,7 +153,6 @@ const Computer: React.FC = () => {
         height: "100%",
       }}
     >
-     {/* <div ref={refBody} className={styles.computer}> */}
       {loading && (
         <Loading
           color="primary"
