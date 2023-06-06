@@ -14,7 +14,7 @@ const projectsDetail = [
       "https://global.discourse-cdn.com/standard17/uploads/threejs/original/2X/e/e4f86d2200d2d35c30f7b1494e96b9595ebc2751.png",
     ],
 
-    link: "www.google.com",
+    link: "https://github.com/ibraheem15/PortFolio",
   },
   {
     title: "Atari Breakout Game",
@@ -26,7 +26,7 @@ const projectsDetail = [
       "https://cdn.cdnlogo.com/logos/o/6/opengl.svg",
       "https://logowik.com/content/uploads/images/atari7759.jpg",
     ],
-    link: "www.google.com",
+    link: "https://github.com/ibraheem15/Atari-Combat-using-OpenGL",
   },
   {
     title: "Google Classroom",
@@ -39,7 +39,7 @@ const projectsDetail = [
       "https://img.icons8.com/color/480/sql.png",
     ],
 
-    link: "www.google.com",
+    link: "https://github.com/i211174/S4_database_project",
   },
   {
     title: "Resident Complaint Portal (Java)",
@@ -51,7 +51,7 @@ const projectsDetail = [
       "https://w7.pngwing.com/pngs/333/488/png-transparent-javafx-dependency-injection-fxml-ignite-orange-logo-computer-wallpaper-thumbnail.png",
       "https://w7.pngwing.com/pngs/776/561/png-transparent-javafx-scene-builder-fxml-jar-mobile-app-development-builder-food-user-interface-design-orange-thumbnail.png",
     ],
-    link: "www.google.com",
+    link: "https://github.com/ibraheem15/Web_Complaint_Portal_-2.0",
   },
   {
     title: "Resident Complaint Portal (EJS, JS)",
@@ -63,7 +63,7 @@ const projectsDetail = [
       "https://img.icons8.com/color/480/mongodb.png",
       "https://img.icons8.com/color/480/javascript.png",
     ],
-    link: "www.google.com",
+    link: "https://github.com/ibraheem15/Complaint-Portal-Website",
   },
 ];
 
@@ -753,7 +753,7 @@ export default function Projects() {
                   icon
                   color="primary"
                   target="_blank"
-                  href="https://github.com/nextui-org/nextui"
+                  href={project.link}
                 >
                   Visit source code on GitHub.
                 </Link>
