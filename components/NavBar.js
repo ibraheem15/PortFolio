@@ -56,12 +56,12 @@ function NavBar() {
           </Navbar.Link>
         )}
 
-        {asPath === "/Projects" ? (
-          <Navbar.Link href="/Projects" isActive id="NavPro">
+        {asPath === "/PortFolio/Projects" ? (
+          <Navbar.Link href="/PortFolio/Projects" isActive id="NavPro">
             Projects
           </Navbar.Link>
         ) : (
-          <Navbar.Link href="/Projects" id="NavPro">
+          <Navbar.Link href="/PortFolio/Projects" id="NavPro">
             Projects
           </Navbar.Link>
         )}
@@ -105,7 +105,7 @@ function NavBar() {
             css={{
               minWidth: "100%",
             }}
-            href="/Projects"
+            href="/PortFolio/Projects"
           >
             Projects
           </Link>

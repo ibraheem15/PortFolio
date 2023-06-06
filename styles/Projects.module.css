@@ -27,6 +27,38 @@
   height: 100%;
 }
 
+@media (max-width: 576px) {
+  .FirstView {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .MainIcon {
+    padding: 20px 20px;
+    flex: auto;
+  }
+  .Icon {
+    margin-left: 20px;
+    width: 100%;
+    height: 100%;
+  }
+  .MainHeading {
+    font-size: 20px;
+    padding-top: 2rem;
+    padding-right: 1rem;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+  }
+  .MainHeading h5 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .svg{
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .Projects {
   margin: 20px;
   /* color: #2c2c2c; */
