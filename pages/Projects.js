@@ -75,6 +75,8 @@ export default function Projects() {
           display: "flex",
         }}
         className={styles.FirstView}
+        data-aos="fade-up"
+        data-aos-duration="1000"
       >
         <div className={styles.MainIcon}>
           <svg
@@ -701,7 +703,11 @@ export default function Projects() {
           </h5>
         </div>
       </section>
-      <section className={styles.Projects}>
+      <section
+        className={styles.Projects}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
         <Grid.Container gap={2} justify="space-evenly">
           {projectsDetail.map((project, index) => (
             <Card
@@ -749,12 +755,7 @@ export default function Projects() {
                 </Grid.Container>
               </Card.Body>
               <Card.Footer>
-                <Link
-                  icon
-                  color="primary"
-                  target="_blank"
-                  href={project.link}
-                >
+                <Link icon color="primary" target="_blank" href={project.link}>
                   Visit source code on GitHub.
                 </Link>
               </Card.Footer>

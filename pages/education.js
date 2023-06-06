@@ -13,7 +13,11 @@ export default function education() {
         }}
         className={styles.FirstView}
       >
-        <div className={styles.MainHatIcon}>
+        <div
+          className={styles.MainHatIcon}
+          data-aos="fade-right"
+          data-aos-duration="1000"
+        >
           <svg
             id="eb113788-f1f1-4c1f-be62-f1d0ea2e1eb6"
             data-name="Layer 1"
@@ -284,7 +288,11 @@ export default function education() {
             ></ellipse>
           </svg>
         </div>
-        <div className={styles.MainHeading}>
+        <div
+          className={styles.MainHeading}
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <h1
             style={{
               fontWeight: "550",
@@ -316,7 +324,7 @@ export default function education() {
           </h1>
         </div>
         <div className={styles.MainEducation}>
-          <div className={styles.EducationCardImg}>
+          <div className={styles.EducationCardImg} data-aos="flip-left" data-aos-duration="1000">
             <Image
               src="https://3.bp.blogspot.com/-Pfo0_Sqtsuk/VmHK1oMyaLI/AAAAAAAAAng/uX-IDIuh5fw/s320/NU_Logo-min.JPG"
               alt="education"
@@ -324,7 +332,7 @@ export default function education() {
               height={200}
             />
           </div>
-          <div className={styles.EducationCard}>
+          <div className={styles.EducationCard} data-aos="fade-left" data-aos-duration="1000">
             <div className={styles.EducationCardText}>
               <div className={styles.EducationCardTextHeading}>
                 <div className={styles.EducationCardTextHeadingTitle}>
@@ -353,7 +361,7 @@ export default function education() {
           </div>
         </div>
         <div className={styles.MainEducation}>
-          <div className={styles.EducationCardImg}>
+          <div className={styles.EducationCardImg} data-aos="flip-left" data-aos-duration="1000">
             <Image
               src="https://i.ibb.co/rxn1SX0/hiteclogo-1.jpg"
               alt="education"
@@ -361,7 +369,7 @@ export default function education() {
               height={200}
             />
           </div>
-          <div className={styles.EducationCard}>
+          <div className={styles.EducationCard} data-aos="fade-left" data-aos-duration="1000">
             <div className={styles.EducationCardText}>
               <div className={styles.EducationCardTextHeading}>
                 <div className={styles.EducationCardTextHeadingTitle}>
@@ -385,7 +393,7 @@ export default function education() {
           </div>
         </div>
       </section>
-      <section>
+      <section data-aos="fade-up" data-aos-duration="1000">
         <div>
           <h1
             style={{
@@ -433,7 +441,7 @@ export default function education() {
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
                   <Text h3 color="black">
-                  Unreal Engine 5 C++ Developer
+                    Unreal Engine 5 C++ Developer
                   </Text>
                 </Col>
               </Card.Header>
@@ -462,7 +470,7 @@ export default function education() {
                 className={styles.CardBody}
                 css={{
                   // background: linear-gradient(to right, #2b5876, #4e4376);
-                  background: "linear-gradient(to right, #348f50, #56b4d3)"
+                  background: "linear-gradient(to right, #348f50, #56b4d3)",
                 }}
               >
                 <Card.Image
