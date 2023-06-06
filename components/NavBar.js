@@ -42,16 +42,16 @@ function NavBar() {
             Home
           </Navbar.Link>
         ) : (
-          <Navbar.Link href="/" id="NavHome">
+          <Navbar.Link href="/PortFolio" id="NavHome">
             Home
           </Navbar.Link>
         )}
-        {asPath === "/education" ? (
-          <Navbar.Link href="/education" isActive id="NavEdu">
+        {asPath === "/PortFolio/education" ? (
+          <Navbar.Link href="/PortFolio/education" isActive id="NavEdu">
             Education and Certifications
           </Navbar.Link>
         ) : (
-          <Navbar.Link href="/education" id="NavEdu">
+          <Navbar.Link href="/PortFolio/education" id="NavEdu">
             Education and Certifications
           </Navbar.Link>
         )}
@@ -66,12 +66,12 @@ function NavBar() {
           </Navbar.Link>
         )}
 
-        {asPath === "/contact" ? (
-          <Navbar.Link href="/contact" isActive id="NavCon">
+        {asPath === "/PortFolio/contact" ? (
+          <Navbar.Link href="/PortFolio/contact" isActive id="NavCon">
             Contact and Resume
           </Navbar.Link>
         ) : (
-          <Navbar.Link href="/contact" id="NavCon">
+          <Navbar.Link href="/PortFolio/contact" id="NavCon">
             Contact and Resume
           </Navbar.Link>
         )}
@@ -83,7 +83,7 @@ function NavBar() {
             css={{
               minWidth: "100%",
             }}
-            href="/"
+            href="/PortFolio"
           >
             Home
           </Link>
@@ -94,7 +94,7 @@ function NavBar() {
             css={{
               minWidth: "100%",
             }}
-            href="/education"
+            href="/PortFolio/education"
           >
             Education and Certifications
           </Link>
@@ -116,7 +116,7 @@ function NavBar() {
             css={{
               minWidth: "100%",
             }}
-            href="/contact"
+            href="/PortFolio/contact"
           >
             Contact and Resume
           </Link>
