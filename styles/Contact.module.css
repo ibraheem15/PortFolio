@@ -1,0 +1,53 @@
+.MainHeading {
+  flex: 2;
+  font-size: 30px;
+  color: #ffffff;
+  text-align: left;
+  margin-top: 20px;
+  justify-content: left;
+  flex-basis: 0%;
+}
+
+.svg {
+  width: 76%;
+  height: 100%;
+}
+
+.MainIcon {
+  padding: 70px 80px;
+  margin-right: -100px;
+}
+
+.FirstView {
+  margin-top: 20px;
+}
+
+.contactMe{
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.link_contactme {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: all 0.38s ease-in-out;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  padding: 4em;
+  margin: -4em;
+}
+
+.link_contactme:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.Form{
+}
+
+.textarea{
+    width: 600px;
+}

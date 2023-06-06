@@ -109,7 +109,7 @@ export default function Home() {
             ghost
             className={styles.contactMe}
           >
-            <Link className={styles.link_contactme} href="/education">
+            <Link className={styles.link_contactme} href="/contact">
               Contact Me
             </Link>
           </Button>
@@ -118,13 +118,7 @@ export default function Home() {
           <components.ComputerCanvas width={width} key={width} />
         </div>
       </section>
-      <section
-        style={
-          {
-            // width: typeof window !== "undefined" ? window.innerWidth : "100%",
-          }
-        }
-      >
+      <section >
         <components.aboutMe />
       </section>
       <div
