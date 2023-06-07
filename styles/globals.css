@@ -43,7 +43,13 @@ button {
   font-weight: semibold;
   color: #000000;
   margin: 0;
-  padding: 0;
+}
+
+@media screen and (max-width: 500px) {
+  .Name {
+    font-size: 1.5rem;
+    padding-left: 5rem;
+  }
 }
 
 /* *Navbar Animations and Transitions */

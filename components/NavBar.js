@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Navbar.module.css";
 
-// import { Layout } from "../pages/Layout";
 import { Navbar, Button, Link, Text, tuple } from "@nextui-org/react";
 import { useRouter } from "next/router";
 
@@ -22,7 +21,7 @@ function NavBar() {
           aria-label="toggle navigation"
           className={styles.navbar_toggle_hide}
         />
-        <Text b color="white" hideIn="xs" className="Name">
+        <Text b color="white" className="Name">
           Ibraheem.Rehman();
         </Text>
       </Navbar.Brand>
