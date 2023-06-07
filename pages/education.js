@@ -15,8 +15,6 @@ export default function education() {
       >
         <div
           className={styles.MainHatIcon}
-          data-aos="fade-right"
-          data-aos-duration="1000"
         >
           <svg
             id="eb113788-f1f1-4c1f-be62-f1d0ea2e1eb6"
@@ -290,8 +288,6 @@ export default function education() {
         </div>
         <div
           className={styles.MainHeading}
-          data-aos="fade-left"
-          data-aos-duration="1000"
         >
           <h1
             style={{
@@ -324,7 +320,7 @@ export default function education() {
           </h1>
         </div>
         <div className={styles.MainEducation}>
-          <div className={styles.EducationCardImg} data-aos="flip-left" data-aos-duration="1000">
+          <div className={styles.EducationCardImg} >
             <Image
               src="https://3.bp.blogspot.com/-Pfo0_Sqtsuk/VmHK1oMyaLI/AAAAAAAAAng/uX-IDIuh5fw/s320/NU_Logo-min.JPG"
               alt="education"
@@ -332,7 +328,7 @@ export default function education() {
               height={200}
             />
           </div>
-          <div className={styles.EducationCard} data-aos="fade-left" data-aos-duration="1000">
+          <div className={styles.EducationCard} >
             <div className={styles.EducationCardText}>
               <div className={styles.EducationCardTextHeading}>
                 <div className={styles.EducationCardTextHeadingTitle}>
@@ -361,7 +357,7 @@ export default function education() {
           </div>
         </div>
         <div className={styles.MainEducation}>
-          <div className={styles.EducationCardImg} data-aos="flip-left" data-aos-duration="1000">
+          <div className={styles.EducationCardImg} >
             <Image
               src="https://i.ibb.co/rxn1SX0/hiteclogo-1.jpg"
               alt="education"
@@ -369,7 +365,7 @@ export default function education() {
               height={200}
             />
           </div>
-          <div className={styles.EducationCard} data-aos="fade-left" data-aos-duration="1000">
+          <div className={styles.EducationCard} >
             <div className={styles.EducationCardText}>
               <div className={styles.EducationCardTextHeading}>
                 <div className={styles.EducationCardTextHeadingTitle}>
@@ -393,7 +389,7 @@ export default function education() {
           </div>
         </div>
       </section>
-      <section data-aos="fade-up" data-aos-duration="1000">
+      <section >
         <div>
           <h1
             style={{
@@ -408,8 +404,9 @@ export default function education() {
             Certifications
           </h1>
         </div>
-        <Grid.Container gap={3} justify="center" >
-          <Grid xs={12} sm={2.5}>
+        {/* <Grid.Container gap={3} justify="center" > */}
+        <div className={styles.CardContainer}>
+          {/* <Grid xs={12} sm={2.5}> */}
             <Card css={{ w: "100%", h: "350px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
@@ -434,8 +431,8 @@ export default function education() {
                 />
               </Card.Body>
             </Card>
-          </Grid>
-          <Grid xs={12} sm={2.5}>
+          {/* </Grid> */}
+          {/* <Grid xs={12} sm={2.5}> */}
             <Card css={{ w: "100%", h: "350px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
@@ -455,8 +452,8 @@ export default function education() {
                 />
               </Card.Body>
             </Card>
-          </Grid>
-          <Grid xs={12} sm={2.5}>
+          {/* </Grid> */}
+          {/* <Grid xs={12} sm={2.5}> */}
             <Card css={{ w: "100%", h: "350px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
                 <Col>
@@ -482,8 +479,9 @@ export default function education() {
                 />
               </Card.Body>
             </Card>
-          </Grid>
-        </Grid.Container>
+          {/* </Grid> */}
+        {/* </Grid.Container> */}
+        </div>
       </section>
     </>
   );
