@@ -1,28 +1,65 @@
 import React, { useState, useEffect } from "react";
 import { Input, Grid, Textarea, Button, Link } from "@nextui-org/react";
 import { motion } from "framer-motion";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
 
 //styles nextjs
 import styles from "../styles/Contact.module.css";
-// import Earth from "./canvas";
-// import { sectionWrapper } from "./hoc";
-// import { slideIn } from "../utils/motion";
+
+// service_4ltsiaa
+// template_dxzb60y
+// Ra19KW-OtkVW7wcEX
 
 //components
 export default function contact() {
-  const [widthh, setWidthh] = useState(12);
+  const [widthh, setWidthh] = useState(0);
 
   const [formRef, setFormRef] = useState();
   const [form, setForm] = useState({
-    name: "",
+    fname: "",
+    lname: "",
     email: "",
+    phone: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => {};
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    setLoading(true);
+
+    emailjs
+      .send(
+        "service_4ltsiaa",
+        "template_dxzb60y",
+        {
+          from_name: form.name,
+          to_name: "Ibraheem",
+          from_email: form.email,
+          to_email: "i211102@nu.edu.pk",
+          message: form.message,
+          phone: form.phone,
+        },
+        "Ra19KW-OtkVW7wcEX"
+      )
+      .then((res) => {
+        console.log(res);
+        setLoading(false);
+        alert(
+          "Thank you for contacting me! I will get back to you as soon as possible."
+        );
+        setForm({
+          fname: "",
+          lname: "",
+          email: "",
+          message: "",
+          phone: "",
+        });
+      })
+      .catch((err) => {
+        setLoading(false);
+        alert("Something went wrong, please try again later.");
+      });
+  };
 
   useEffect(() => {
     setWidthh(window.innerWidth);
@@ -844,62 +881,63 @@ export default function contact() {
         <div className={styles.MainHeading}>
           <h1>Get in Touch</h1>
           <form className={styles.Form}>
-            <Grid.Container
-              gap={3.15}
-              justify="center"
-              css={{ marginLeft: "-75px" }}
-            >
-              <Grid xs={6} css={{ marginRight: "-107px" }}>
-                <Input
-                  bordered
-                  labelPlaceholder="Default"
-                  color="default"
-                  width="300px"
-                />
-              </Grid>
-              <Grid xs={6}>
-                <Input
-                  bordered
-                  labelPlaceholder="Default"
-                  color="default"
-                  width="300px"
-                />
-              </Grid>
-              <Grid xs={6} css={{ marginRight: "-107px" }}>
-                <Input
-                  bordered
-                  labelPlaceholder="Default"
-                  color="default"
-                  width="300px"
-                />
-              </Grid>
-              <Grid xs={6}>
-                <Input
-                  bordered
-                  labelPlaceholder="Default"
-                  color="default"
-                  width="300px"
-                />
-              </Grid>
-              <Grid xs={12} css={{ marginRight: "-110px" }}>
-                <Textarea
-                  bordered
-                  color="default"
-                  labelPlaceholder="Bordered Textarea"
-                  width={widthh ? "615px" : widthh}
-                  minRows={25}
-                />
-              </Grid>
-            </Grid.Container>
+            <div className={styles.FormContainer}>
+              <Input
+                bordered
+                labelPlaceholder="First Name"
+                color="default"
+                width="100%"
+                value={form.fname}
+                onChange={(e) => setForm({ ...form, fname: e.target.value })}
+                className={styles.Input}
+              />
+              <Input
+                bordered
+                labelPlaceholder="Last Name"
+                color="default"
+                width="100%"
+                value={form.lname}
+                onChange={(e) => setForm({ ...form, lname: e.target.value })}
+                className={styles.Input}
+              />
+              <Input
+                bordered
+                labelPlaceholder="Email"
+                color="default"
+                width="100%"
+                value={form.email}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                className={styles.Input}
+              />
+              <Input
+                bordered
+                labelPlaceholder="Phone Number"
+                color="default"
+                width="100%"
+                value={form.phone}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                className={styles.Input}
+              />
+              <Textarea
+                bordered
+                color="default"
+                labelPlaceholder="Message"
+                css={{
+                  gridColumn: "1/-1",
+                }}
+                minRows={25}
+                value={form.message}
+                onChange={(e) => setForm({ ...form, message: e.target.value })}
+              />
+            </div>
             <Button
               size={"lg"}
               color="success"
               ghost
               className={styles.contactMe}
+              onClick={handleSubmit}
             >
-              <Link className={styles.link_contactme} href="/education">
-                Contact Me
-              </Link>
+              Contact Me
             </Button>
           </form>
         </div>

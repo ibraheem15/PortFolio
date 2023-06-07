@@ -408,7 +408,7 @@ export default function education() {
             Certifications
           </h1>
         </div>
-        <Grid.Container gap={3} justify="center">
+        <Grid.Container gap={3} justify="center" >
           <Grid xs={12} sm={2.5}>
             <Card css={{ w: "100%", h: "350px" }}>
               <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
@@ -421,7 +421,6 @@ export default function education() {
               <Card.Body
                 className={styles.CardBody}
                 css={{
-                  // background: linear-gradient(to right, #2b5876, #4e4376);
                   background: "linear-gradient(to right, #02aab0, #00cdac);",
                 }}
               >
