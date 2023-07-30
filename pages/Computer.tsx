@@ -6,6 +6,7 @@ import { Loading } from "@nextui-org/react";
 import styles from "./Home.module.css";
 
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
 export function loadGLTFModel(
   scene,
@@ -14,7 +15,17 @@ export function loadGLTFModel(
 ) {
   const { receiveShadow, castShadow } = options;
   return new Promise((resolve, reject) => {
+    // const loader = new GLTFLoader();
     const loader = new GLTFLoader();
+
+    // const dracoLoader = new DRACOLoader();
+    // dracoLoader.setDecoderPath("/draco/gltf/");
+    // loader.setDRACOLoader(dracoLoader);
+
+    const draco = new DRACOLoader();
+    draco.setDecoderConfig({ type: "js" });
+    draco.setDecoderPath("https://www.gstatic.com/draco/v1/decoders/");
+    loader.setDRACOLoader(draco);
 
     loader.load(
       glbPath,
@@ -29,8 +40,8 @@ export function loadGLTFModel(
 
         obj.traverse(function (child) {
           // if (child.isMesh) {
-            child.castShadow = castShadow;
-            child.receiveShadow = receiveShadow;
+          child.castShadow = castShadow;
+          child.receiveShadow = receiveShadow;
           // }
         });
         resolve(obj);
@@ -105,7 +116,8 @@ const Computer: React.FC = () => {
       controls.target = target;
       setControls(controls);
 
-      loadGLTFModel(scene, "desktop_pc/model.glb", {
+      // loadGLTFModel(scene, "desktop_pc/model.glb", {
+      loadGLTFModel(scene, "desktop_pc/modelDraco.gltf", {
         receiveShadow: false,
         castShadow: false,
       }).then(() => {
@@ -142,8 +154,9 @@ const Computer: React.FC = () => {
     }
   }, []);
 
-  const [width, setWidth] = useState(typeof window !== "undefined" && window.innerWidth);
-
+  const [width, setWidth] = useState(
+    typeof window !== "undefined" && window.innerWidth
+  );
 
   return (
     <div
