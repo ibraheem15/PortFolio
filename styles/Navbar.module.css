@@ -1,6 +1,9 @@
 .navbar_toggle_hide {
   display: none;
 }
+.navbar_content {
+  padding-right: -100px;
+}
 
 @media only screen and (max-width: 1026px) {
   .navbar_toggle_hide {

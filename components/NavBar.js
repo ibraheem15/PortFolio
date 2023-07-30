@@ -10,7 +10,7 @@ function NavBar() {
     <Navbar
       variant="static"
       height="106px"
-      className={styles.backgroundcolor}
+      className={styles.navbar_content}
       css={{
         $$navbarBackgroundColor: "transparent",
         $$navbarBlurBackgroundColor: "transparent",
@@ -71,9 +71,20 @@ function NavBar() {
           </Navbar.Link>
         ) : (
           <Navbar.Link href="/PortFolio/contact" id="NavCon">
-            Contact and Resume
+            Contact Me
           </Navbar.Link>
         )}
+
+        {/* donwload cv button */}
+        {/* <a href='../public/M_Ibraheem_Rehman_Qazi_CV.pdf' download>Click to download</a> */}
+        <Button auto color="success" ghost>
+          <Link
+            href="/M_Ibraheem_Rehman_Qazi_CV.pdf"
+            style={{ color: "white" }}
+          >
+            Download CV
+          </Link>
+        </Button>
       </Navbar.Content>
       <Navbar.Collapse>
         <Navbar.CollapseItem>
@@ -117,7 +128,18 @@ function NavBar() {
             }}
             href="/PortFolio/contact"
           >
-            Contact and Resume
+            Contact Me
+          </Link>
+        </Navbar.CollapseItem>
+        <Navbar.CollapseItem>
+          <Link
+            href="/M_Ibraheem_Rehman_Qazi_CV.pdf"
+            css={{
+              minWidth: "100%",
+            }}
+            color="inherit"
+          >
+            Download CV
           </Link>
         </Navbar.CollapseItem>
       </Navbar.Collapse>
