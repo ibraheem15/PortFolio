@@ -79,7 +79,7 @@ function NavBar() {
         {/* <a href='../public/M_Ibraheem_Rehman_Qazi_CV.pdf' download>Click to download</a> */}
         <Button auto color="success" ghost>
           <Link
-            href="/M_Ibraheem_Rehman_Qazi_CV.pdf"
+            href="/PortFolio/M_Ibraheem_Rehman_Qazi_CV.pdf"
             style={{ color: "white" }}
           >
             Download CV
@@ -133,7 +133,7 @@ function NavBar() {
         </Navbar.CollapseItem>
         <Navbar.CollapseItem>
           <Link
-            href="/M_Ibraheem_Rehman_Qazi_CV.pdf"
+            href="/PortFolio/M_Ibraheem_Rehman_Qazi_CV.pdf"
             css={{
               minWidth: "100%",
             }}
