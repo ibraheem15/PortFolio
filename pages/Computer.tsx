@@ -117,7 +117,8 @@ const Computer: React.FC = () => {
       setControls(controls);
 
       // loadGLTFModel(scene, "desktop_pc/model.glb", {
-      loadGLTFModel(scene, "desktop_pc/modelDraco.gltf", {
+      // loadGLTFModel(scene, "desktop_pc/modelDraco.gltf", {
+        loadGLTFModel(scene, "gaming_desktop_pc/scene.gltf", {
         receiveShadow: false,
         castShadow: false,
       }).then(() => {
