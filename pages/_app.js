@@ -1,7 +1,7 @@
 import { NextUIProvider } from "@nextui-org/react";
 import "../styles/globals.css";
 import "../styles/AboutMeExplain.css";
-import Layout from "../components/Layout";
+import Layout from "./Layout";
 import Head from "next/head";
 import { useEffect } from "react";
 import "aos/dist/aos.css";
@@ -25,7 +25,11 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Montserrat:wght@200;300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
-              <meta name="image" property="og:image" content="https://avatars.githubusercontent.com/u/103947216?v=4" />
+        <meta
+          name="image"
+          property="og:image"
+          content="https://avatars.githubusercontent.com/u/103947216?v=4"
+        />
       </Head>
       <main className="dark text-foreground bg-background">
         <Layout>

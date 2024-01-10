@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 import Aos from "aos";
 
 function Layout({ children }) {
