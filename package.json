@@ -1,5 +1,5 @@
 {
-  "homepage": "https://ibraheem15.github.io/PortFolio",
+  "homepage": ".",
   "private": true,
   "scripts": {
     "predeploy": "npm run build",
