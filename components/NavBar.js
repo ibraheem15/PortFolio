@@ -12,7 +12,7 @@ import {
 } from "@nextui-org/react";
 import { useRouter } from "next/router";
 
-export default function App() {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { asPath } = useRouter();
 

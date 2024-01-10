@@ -16,7 +16,7 @@ import {
 
 import { useRouter } from "next/router";
 
-function NavBar() {
+function NavBarOld() {
   const { asPath } = useRouter();
   return (
     <Navbar
@@ -175,4 +175,4 @@ function NavBar() {
     </Navbar>
   );
 }
-export default NavBar;
+export default NavBarOld;
