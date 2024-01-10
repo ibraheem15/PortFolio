@@ -7,31 +7,27 @@ const service = [
   {
     title: "Web Development",
     icon: "https://img.icons8.com/color-glass/480/000000/google-code.png",
-    description: "I can create a website for you using React.js and Next.js",
-    // <img width="48" height="48" src="https://img.icons8.com/color-glass/48/000000/google-code.png" alt="google-code"/>
+    description: "I can create a Full Stack Website for you",
   },
   {
     title: "C++ Development",
     icon: "https://img.icons8.com/color/480/c-plus-plus-logo.png",
     description: "I can create a program for you using C++",
-    // <img width="480" height="480" src="https://img.icons8.com/color/480/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>
   },
   {
     title: "SQL Scripting",
-    description: "I can create a database for you using SQL",
     icon: "https://img.icons8.com/external-soft-fill-juicy-fish/480/external-sql-servers-and-networks-soft-fill-soft-fill-juicy-fish.png",
+    description: "I can create a database for you using SQL",
   },
   {
     title: "Java Development",
     icon: "https://img.icons8.com/color/480/java-coffee-cup-logo--v1.png",
     description: "I can create a program for you using Java",
-    // <img width="480" height="480" src="https://img.icons8.com/color/480/java-coffee-cup-logo--v1.png" alt="java-coffee-cup-logo--v1"/>
   },
   {
     title: "C# Learning",
     icon: "https://img.icons8.com/color/480/c-sharp-logo-2.png",
     description: "I am currently learning C#",
-    // <img width="480" height="480" src="https://img.icons8.com/color/480/c-sharp-logo-2.png" alt="c-sharp-logo-2"/>
   },
 ];
 
@@ -97,7 +93,7 @@ const AboutMe = () => {
   return (
     <>
       <motion.h1
-        className={styles.h1whatIdo}
+        className="text-4xl font-bold text-center mt-10 mb-10"
         ref={ref}
         style={{
           transform: isInView ? "none" : "translateY(-200px)",

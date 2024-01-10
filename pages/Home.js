@@ -1,11 +1,11 @@
 import Link from "next/link";
 import styles from "./Home.module.css";
-import { Button, Spacer, Grid } from "@nextui-org/react";
-import ComputerCanvas from "./Computer";
+import { Button, Spacer } from "@nextui-org/react";
+import Computer2 from "./Computer2";
 import React, { useEffect, useState, useLayoutEffect } from "react";
 import aboutMe from "./AboutMe";
 import AboutMeExplain from "./AboutMeExplain";
-const components = { ComputerCanvas, aboutMe, AboutMeExplain };
+const components = { aboutMe, AboutMeExplain };
 
 export default function Home() {
   const [justify, setJustify] = React.useState("flex-start");
@@ -43,82 +43,93 @@ export default function Home() {
             Software Engineer, Footballer ⚽, Gamer 🎮 & Always Learning 📖.
           </h3>
           <Spacer x={1.5} />
-          <Grid.Container
-            gap={2}
-            className={styles.buttonsCss}
-            justify={justify}
-          >
-            <Spacer x={0.5} />
+          {/* <div className="grid grid-cols-2 gap-4 justify-center"> */}
+          <div className="flex mb-5 mt-4 justify-center lg:justify-start">
             <Button
+              isIconOnly
               auto
-              css={{ backgroundColor: "#e4405f" }}
-              icon={
-                <img src="https://img.icons8.com/ios/30/000000/instagram-new.png" />
-              }
+              className="bg-red-500"
               onClick={() =>
                 window.open("https://www.instagram.com/ibraheem_rehman/")
               }
-            />
-            <Spacer x={0.5} />
+            >
+              <img
+                src="https://img.icons8.com/ios/50/000000/instagram-new.png"
+                width="30"
+                height="30"
+              />
+            </Button>
+            <Spacer x={1.5} />
             <Button
+              isIconOnly
               auto
-              css={{ backgroundColor: "#1da1f2" }}
+              className="bg-blue-500"
               color="#1da1f2"
-              icon={
-                <img src="https://img.icons8.com/ios-filled/30/000000/twitter.png" />
-              }
               onClick={() => window.open("https://twitter.com/ibraheem_rehman")}
-            />
-            <Spacer x={0.5} />
+            >
+              <img
+                src="https://img.icons8.com/ios-filled/60/000000/twitter.png"
+                width="30"
+                height="30"
+              />
+            </Button>
+            <Spacer x={1.5} />
             <Button
+              isIconOnly
               auto
-              css={{ backgroundColor: "#ffff" }}
-              icon={
-                <img src="https://img.icons8.com/ios-filled/30/000000/github.png" />
-              }
+              className="bg-white"
               onClick={() => window.open("https://github.com/ibraheem15")}
-            />
-            <Spacer x={0.5} />
+            >
+              <img
+                src="https://img.icons8.com/ios-filled/60/000000/github.png"
+                width="30"
+                height="30"
+              />
+            </Button>
+            <Spacer x={1.5} />
             <Button
+              isIconOnly
               auto
-              css={{ backgroundColor: "#0e76a8" }}
-              icon={
-                <img src="https://img.icons8.com/ios-filled/30/linkedin.png" />
-              }
+              className="bg-blue-500"
               onClick={() =>
                 window.open(
                   "https://www.linkedin.com/in/m-ibraheem-rehman-qazi-711752244/"
                 )
               }
-            />
-            <Spacer x={0.5} />
+            >
+              <img
+                src="https://img.icons8.com/ios-filled/60/linkedin.png"
+                width="30"
+                height="30"
+              />
+            </Button>
+            <Spacer x={1.5} />
             <Button
+              isIconOnly
               auto
-              css={{ backgroundColor: "#ea4335" }}
-              //gmail
-              icon={
-                <img src="https://img.icons8.com/ios-filled/30/000000/gmail.png" />
-              }
+              className="bg-red-500"
               onClick={() => window.open("mail.google.com")}
-            />
-          </Grid.Container>
+            >
+              <img
+                src="https://img.icons8.com/ios-filled/30/000000/gmail.png"
+                width="30"
+                height="30"
+              />
+            </Button>
+          </div>
           <Spacer y={1.5} />
-          <Button
-            size={"lg"}
-            color="success"
-            ghost
-            className={styles.contactMe}
-          >
+          <Button size={"lg"} variant="ghost" color="success" className="mt-4">
             <Link className={styles.link_contactme} href="/contact">
               Contact Me
             </Link>
           </Button>
         </div>
-        <div className={styles.computer}>
-          <components.ComputerCanvas width={width} key={width} />
+        <div className={styles.computer} id="threejs">
+          <Computer2 width={width} key={width} />
+          {/* <components.ComputerCanvas width={width} key={width} /> */}
         </div>
       </section>
-      <section >
+      <section id="aboutMe" >
         <components.aboutMe />
       </section>
       <div
@@ -130,7 +141,6 @@ export default function Home() {
       >
         <components.AboutMeExplain />
       </div>
-      
     </div>
   );
 }

@@ -1,149 +1,110 @@
-import React, { useState, useEffect } from "react";
-import styles from "../styles/Navbar.module.css";
-
-import { Navbar, Button, Link, Text, tuple } from "@nextui-org/react";
+import React from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  NavbarContent,
+  NavbarItem,
+  Link,
+  Button,
+  NavbarMenuItem,
+  NavbarMenuToggle,
+  NavbarMenu,
+} from "@nextui-org/react";
 import { useRouter } from "next/router";
 
-function NavBar() {
+export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { asPath } = useRouter();
+
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ];
+
   return (
-    <Navbar
-      variant="static"
-      height="106px"
-      className={styles.navbar_content}
-      css={{
-        $$navbarBackgroundColor: "transparent",
-        $$navbarBlurBackgroundColor: "transparent",
-      }}
-    >
-      <Navbar.Brand>
-        <Navbar.Toggle
-          aria-label="toggle navigation"
-          className={styles.navbar_toggle_hide}
+    <Navbar onMenuOpenChange={setIsMenuOpen}>
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
         />
-        <Text b color="white" className="Name">
-          Ibraheem.Rehman();
-        </Text>
-      </Navbar.Brand>
-      <Navbar.Content
-        hideIn="xs"
-        variant="underline"
-        gap="$16"
-        css={{
-          $$navbarBackgroundColor: "transparent",
-          $$navbarBlurBackgroundColor: "transparent",
-          $$navbarItemFontWeight: "450",
-          $$navbarItemFontSize: "1.1rem",
-        }}
-      >
-        {asPath === "/PortFolio" ? (
-          <Navbar.Link href="/PortFolio" isActive id="NavHome">
-            Home
-          </Navbar.Link>
-        ) : (
-          <Navbar.Link href="/PortFolio" id="NavHome">
-            Home
-          </Navbar.Link>
-        )}
-        {asPath === "/PortFolio/education" ? (
-          <Navbar.Link href="/PortFolio/education" isActive id="NavEdu">
-            Education and Certifications
-          </Navbar.Link>
-        ) : (
-          <Navbar.Link href="/PortFolio/education" id="NavEdu">
-            Education and Certifications
-          </Navbar.Link>
-        )}
-
-        {asPath === "/PortFolio/Projects" ? (
-          <Navbar.Link href="/PortFolio/Projects" isActive id="NavPro">
-            Projects
-          </Navbar.Link>
-        ) : (
-          <Navbar.Link href="/PortFolio/Projects" id="NavPro">
-            Projects
-          </Navbar.Link>
-        )}
-
-        {asPath === "/PortFolio/contact" ? (
-          <Navbar.Link href="/PortFolio/contact" isActive id="NavCon">
-            Contact and Resume
-          </Navbar.Link>
-        ) : (
-          <Navbar.Link href="/PortFolio/contact" id="NavCon">
-            Contact Me
-          </Navbar.Link>
-        )}
-
-        {/* donwload cv button */}
-        {/* <a href='../public/M_Ibraheem_Rehman_Qazi_CV.pdf' download>Click to download</a> */}
-        <Button auto color="success" ghost>
-          <Link
-            href="/PortFolio/M_Ibraheem_Rehman_Qazi_CV.pdf"
-            style={{ color: "white" }}
-          >
-            Download CV
+        <NavbarBrand justify="start">
+          <Link href="/" color="success">
+            Ibraheem.Rehman();
           </Link>
-        </Button>
-      </Navbar.Content>
-      <Navbar.Collapse>
-        <Navbar.CollapseItem>
-          <Link
-            color="inherit"
-            css={{
-              minWidth: "100%",
-            }}
-            href="/PortFolio"
-          >
+        </NavbarBrand>
+      </NavbarContent>
+
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem isActive={asPath === "/PortFolio"}>
+          <Link href="/PortFolio" id="NavHome">
             Home
           </Link>
-        </Navbar.CollapseItem>
-        <Navbar.CollapseItem>
+        </NavbarItem>
+        <NavbarItem>
           <Link
-            color="inherit"
-            css={{
-              minWidth: "100%",
-            }}
             href="/PortFolio/education"
+            isActive={asPath === "/PortFolio/education"}
+            id="NavEdu"
           >
             Education and Certifications
           </Link>
-        </Navbar.CollapseItem>
-        <Navbar.CollapseItem>
+        </NavbarItem>
+        <NavbarItem>
           <Link
-            color="inherit"
-            css={{
-              minWidth: "100%",
-            }}
             href="/PortFolio/Projects"
+            isActive={asPath === "/PortFolio/Projects"}
+            id="NavPro"
           >
             Projects
           </Link>
-        </Navbar.CollapseItem>
-        <Navbar.CollapseItem>
-          <Link
-            color="inherit"
-            css={{
-              minWidth: "100%",
-            }}
-            href="/PortFolio/contact"
-          >
+        </NavbarItem>
+        <NavbarItem isActive={asPath === "/PortFolio/contact"}>
+          <Link href="contact" id="NavContact" color="foreground" id="NavCon">
             Contact Me
           </Link>
-        </Navbar.CollapseItem>
-        <Navbar.CollapseItem>
-          <Link
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem>
+          <Button
+            as={Link}
+            color="success"
             href="/PortFolio/M_Ibraheem_Rehman_Qazi_CV.pdf"
-            css={{
-              minWidth: "100%",
-            }}
-            color="inherit"
+            variant="flat"
           >
             Download CV
-          </Link>
-        </Navbar.CollapseItem>
-      </Navbar.Collapse>
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              color={
+                index === 2
+                  ? "primary"
+                  : index === menuItems.length - 1
+                  ? "danger"
+                  : "foreground"
+              }
+              className="w-full"
+              href="#"
+              size="lg"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
     </Navbar>
   );
 }
-export default NavBar;

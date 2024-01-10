@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react";
-import NavBar from "./NavBar";
+import { useEffect } from "react";
 import Footer from "./Footer";
 import Aos from "aos";
+import Index from "./Navbar";
+import Navbar from "./Navbar";
+
 function Layout({ children }) {
   useEffect(() => {
-    Aos.refresh()
-  }, [])
+    Aos.refresh();
+  }, []);
   return (
     <div className="layout">
-      <NavBar />
+      <Navbar />
       {children}
       <Footer />
     </div>

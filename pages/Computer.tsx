@@ -5,7 +5,8 @@ import * as THREE from "three";
 import { Loading } from "@nextui-org/react";
 import styles from "./Home.module.css";
 
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+// import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { DRACOLoader } from "three/examples/jsm/loaders/DRACOLoader";
 
 export function loadGLTFModel(
@@ -118,7 +119,7 @@ const Computer: React.FC = () => {
 
       // loadGLTFModel(scene, "desktop_pc/model.glb", {
       // loadGLTFModel(scene, "desktop_pc/modelDraco.gltf", {
-        loadGLTFModel(scene, "gaming_desktop_pc/scene.gltf", {
+      loadGLTFModel(scene, "gaming_desktop_pc/scene.gltf", {
         receiveShadow: false,
         castShadow: false,
       }).then(() => {
