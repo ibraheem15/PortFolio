@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import Navbar from "../components/Navbar";
+import Navbarr from "../components/Navbarr";
 import Footer from "../components/Footer";
 import Aos from "aos";
 
@@ -9,7 +9,7 @@ function Layout({ children }) {
   }, []);
   return (
     <div className="layout">
-      <Navbar />
+      <Navbarr />
       {children}
       <Footer />
     </div>
