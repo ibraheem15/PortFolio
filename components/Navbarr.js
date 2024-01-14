@@ -97,7 +97,12 @@ export default function Navbarr() {
           </Link>
         </NavbarItem>
         <NavbarItem isActive={asPath === "/PortFolio/contact"}>
-          <Link href="/PortFolio/contact" id="NavContact" color="foreground" id="NavCon">
+          <Link
+            href="/PortFolio/contact"
+            id="NavContact"
+            color="foreground"
+            id="NavCon"
+          >
             Contact Me
           </Link>
         </NavbarItem>

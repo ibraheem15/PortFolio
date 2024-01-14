@@ -1,15 +1,19 @@
 import Link from "next/link";
 import styles from "./Home.module.css";
-import { Button, Spacer } from "@nextui-org/react";
+import { Button, Spacer, Progress } from "@nextui-org/react";
 import Computer2 from "./Computer2";
 import React, { useEffect, useState, useLayoutEffect } from "react";
 import aboutMe from "./AboutMe";
 import AboutMeExplain from "./AboutMeExplain";
+import { useProgressBarStore } from "../components/ProgressBarStore";
 const components = { aboutMe, AboutMeExplain };
 
 export default function Home() {
   const [justify, setJustify] = React.useState("flex-start");
   const [width, setWidth] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const value = useProgressBarStore((state) => state.value);
+
   useEffect(() => {
     const handleResize = () => {
       const width =
@@ -28,6 +32,12 @@ export default function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    if (value === 100) {
+      setLoading(false);
+    }
+  }, [value]);
 
   return (
     <div>
@@ -125,11 +135,20 @@ export default function Home() {
           </Button>
         </div>
         <div className={styles.computer} id="threejs">
+          {loading ? (
+            <Progress
+              value={value}
+              color="success"
+              size="md"
+              showValueLabel={true}
+              className="max-w-md mx-auto mt-32"
+              id="progressBar"
+            />
+          ) : null}
           <Computer2 width={width} key={width} />
-          {/* <components.ComputerCanvas width={width} key={width} /> */}
         </div>
       </section>
-      <section id="aboutMe" >
+      <section id="aboutMe">
         <components.aboutMe />
       </section>
       <div

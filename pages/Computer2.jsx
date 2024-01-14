@@ -3,9 +3,12 @@ import React, { useEffect, useState, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { LoadingManager } from "three";
+import { useProgressBarStore } from "../components/ProgressBarStore";
 
 const Computer2 = () => {
   const [justify, setJustify] = React.useState("flex-start");
+  const setProgressBarValue = useProgressBarStore((state) => state.setValue);
 
   const containerRef = useRef();
   //   width and height from props
@@ -69,7 +72,6 @@ const Computer2 = () => {
 
       const groundGeometry = new THREE.PlaneGeometry(20, 20, 32, 32);
       groundGeometry.rotateX(-Math.PI / 2);
-     
 
       const ambientLight = new THREE.AmbientLight(0xcccccc, 1);
       scene.add(ambientLight);
@@ -81,14 +83,28 @@ const Computer2 = () => {
 
       animate();
 
-      let loader = new GLTFLoader();
-      loader.load("/gaming_desktop_pc/scene.gltf", function (gltf) {
-        const mesh = gltf.scene;
-        mesh.scale.set(1.5, 1.5, 1.5);
-        mesh.position.set(5, 3, 0);
-        mesh.rotation.set(0, -1.25, 0);
-        scene.add(gltf.scene);
-      });
+      let manager = new LoadingManager();
+
+      manager.onProgress = function (item, loaded, total) {
+        setProgressBarValue((loaded / total) * 100);
+      };
+
+      let loader = new GLTFLoader(manager);
+      // loader.load("/PortFolio/gaming_desktop_pc/scene.gltf", function (gltf) {
+      loader.load(
+        "gaming_desktop_pc/scene.gltf",
+        function (gltf) {
+          const mesh = gltf.scene;
+          mesh.scale.set(1.5, 1.5, 1.5);
+          mesh.position.set(5, 3, 0);
+          mesh.rotation.set(0, -1.25, 0);
+          scene.add(gltf.scene);
+        },
+        undefined,
+        function (error) {
+          console.error(error);
+        }
+      );
 
       containerRef.current.appendChild(renderer.domElement);
     }
