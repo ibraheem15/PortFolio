@@ -1,6 +1,12 @@
-import React from "react";
 import styles from "../styles/Projects.module.css";
-import { Card, Grid, Text, Link, Badge } from "@nextui-org/react";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Text,
+  Link,
+} from "@nextui-org/react";
 
 const projectsDetail = [
   {
@@ -693,7 +699,9 @@ export default function Projects() {
           </svg>
         </div>
         <div className={styles.MainHeading}>
-          <h1>Projects</h1>
+          <h1
+            className="text-4xl font-bold text-center mb-5"
+          >Projects</h1>
           <h5>
             My projects make use of a vast variety of latest technology tools.
             My best experience is to create React Projects, C# applications,
@@ -708,60 +716,52 @@ export default function Projects() {
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <Grid.Container gap={2} justify="space-evenly">
+        {/* <Grid.Container gap={2} justify="space-evenly"> */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projectsDetail.map((project, index) => (
-            <Card
-              css={{
-                p: "$6",
-                mw: "500px",
-                height: "19rem",
-                marginTop: "$10",
-                background: "linear-gradient(to left, #2c2c2c, #434343)",
-              }}
-            >
-              <Card.Header>
-                <Grid.Container>
-                  <Grid xs={12}>
-                    <Text h3 css={{ lineHeight: "$xs" }}>
-                      {project.title}
-                    </Text>
-                  </Grid>
-                </Grid.Container>
-              </Card.Header>
-              <Card.Body css={{ py: "$2" }}>
-                <Text size="$md">{project.description}</Text>
-                <Grid.Container gap={1} css={{ mt: "$4" }}>
+            // 2c2c2c to 434343
+            <Card className="m-2 bg-gradient-to-r from-zinc-700 to-zinc-800" key={index}>
+              <CardHeader className="flex justify-between ml-2 mt-2">
+                <div className="flex">
+                  <p className="text-2xl font-bold">{project.title}</p>
+                </div>
+              </CardHeader>
+              <CardBody className="m-2 pt-0">
+                <p className="text-md">{project.description}</p>
+                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 mt-3">
                   {Array.isArray(project.icons) ? (
                     project.icons.map((icon, index) => (
-                      <Grid xs={3} key={index}>
+                      // <Grid xs={3} key={index}>
+                      <div key={index}>
                         <img
                           alt="nextui logo"
                           src={icon}
                           width="50px"
                           height="50px"
                         />
-                      </Grid>
+                      </div>
                     ))
                   ) : (
-                    <Grid xs={3}>
+                    // <Grid xs={3}>
+                    <div>
                       <img
                         alt="nextui logo"
                         src={project.icons}
                         width="50px"
                         height="50px"
                       />
-                    </Grid>
+                    </div>
                   )}
-                </Grid.Container>
-              </Card.Body>
-              <Card.Footer>
+                </div>
+              </CardBody>
+              <CardFooter className="pb-4">
                 <Link icon color="primary" target="_blank" href={project.link}>
                   Visit source code on GitHub.
                 </Link>
-              </Card.Footer>
+              </CardFooter>
             </Card>
           ))}
-        </Grid.Container>
+        </div>
       </section>
     </>
   );

@@ -39,8 +39,7 @@
     font-size: 20px;
     padding-top: 2rem;
     padding-left: 1rem;
-      flex-wrap: wrap;
-    margin-left: 1rem;
+    flex-wrap: wrap;
   }
   .HeadingP {
     font-size: 22px;
@@ -146,7 +145,7 @@
 
 .EducationCardTextContent li {
   position: relative;
-  padding-left: 1.5em;
+  padding-left: 2.5em;
   line-height: 1.5em;
 }
 
@@ -154,7 +153,7 @@
   content: "»";
   position: absolute;
   top: -5px;
-  left: -10px;
+  left: 10px;
   font-size: 2.5em;
   --hue: 0;
   color: hsl(var(--hue) 50% 50%);
@@ -183,7 +182,69 @@
   color: #888888;
 }
 
+.CardContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 35px;
+  margin-top: 20px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .HatIcon {
+    width: 100%;
+    height: 100%;
+  }
+  .MainHeading {
+    padding-top: 10svh;
+    flex-wrap: wrap;
+    max-width: 40%;
+  }
+  .HeadingP {
+    font-size: 17px;
+    font-weight: 500;
+  }
+
+  .EducationCardImg {
+    margin-right: 10px;
+    margin-left: 0px;
+  }
+  .EducationCardTextDate p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .EducationCardTextContent p {
+    font-size: 16px;
+  }
+
+  .EducationCardTextHeadingTitle h3 {
+    font-size: 16px;
+  }
+
+  .EducationCardTextHeadingTitle {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    width: 80%;
+  }
+  .CardContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px;
+    margin-top: 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 576px) {
+  .MainHeading {
+    max-width: 100%;
+    padding-top: 3rem;
+    padding-left: 3rem;
+  }
   .MainEducation {
     display: flex;
     flex-direction: column;
@@ -247,8 +308,6 @@
     font-size: 16px;
     font-weight: 600;
     color: #ffffff;
-    /* padding-left: 400px; */
-    /* padding-right: 10px; */
   }
   .EducationCardTextContent p {
     font-size: 18px;
@@ -270,14 +329,12 @@
   }
   .EducationCardTextContent li {
     position: relative;
-    padding-left: 1.5em;
     line-height: 1.5em;
   }
   .EducationCardTextContent li::before {
     content: "»";
     position: absolute;
     top: -5px;
-    left: -10px;
     font-size: 2.5em;
     --hue: 0;
     color: hsl(var(--hue) 50% 50%);
@@ -317,17 +374,8 @@
   transition: all 0.5s ease-in-out;
 }
 
-.CardContainer{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 35px;
-  margin-top: 20px;
-  width: 70%;
-  margin: 0 auto;
-}
-
 @media (max-width: 576px) {
-  .CardContainer{
+  .CardContainer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 35px;
@@ -335,4 +383,4 @@
     width: 90%;
     margin: 0 auto;
   }
-} 
+}

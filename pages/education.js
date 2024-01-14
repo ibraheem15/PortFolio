@@ -1,8 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import styles from "./Education.module.css";
-import { Image, gray, grayDark } from "@nextui-org/react";
-import { Grid, Card, Col, Text } from "@nextui-org/react";
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Image,
+} from "@nextui-org/react";
 
 export default function education() {
   return (
@@ -293,15 +298,10 @@ export default function education() {
           data-aos="fade-left"
           data-aos-duration="1000"
         >
-          <h1
-            style={{
-              fontWeight: "550",
-              fontSmooth: "auto",
-            }}
-          >
-            Education
-          </h1>
-          <h3>Basic Qualification and Ceritifications</h3>
+          <h1 className="text-4xl font-semibold pb-4">Education</h1>
+          <h3 className="text-xl font-semibold pb-4">
+            Basic Qualification and Ceritifications
+          </h3>
           <p className={styles.HeadingP}>
             I actively participate in tech related activities and workshops as
             well as do Leetcodes to practice programming. Below are some of my
@@ -311,20 +311,16 @@ export default function education() {
       </section>
       <section>
         <div>
-          <h1
-            style={{
-              fontWeight: "550",
-              fontSmooth: "auto",
-              textAlign: "center",
-              fontSize: "2.65rem",
-              marginTop: "2.5rem",
-            }}
-          >
+          <h1 className="text-4xl font-semibold text-center pt-4">
             Degrees Received
           </h1>
         </div>
-        <div className={styles.MainEducation} data-aos="fade-up" data-aos-duration="1000">
-          <div className={styles.EducationCardImg} >
+        <div
+          className={styles.MainEducation}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div className={styles.EducationCardImg}>
             <Image
               src="https://3.bp.blogspot.com/-Pfo0_Sqtsuk/VmHK1oMyaLI/AAAAAAAAAng/uX-IDIuh5fw/s320/NU_Logo-min.JPG"
               alt="education"
@@ -332,7 +328,7 @@ export default function education() {
               height={200}
             />
           </div>
-          <div className={styles.EducationCard} >
+          <div className={styles.EducationCard}>
             <div className={styles.EducationCardText}>
               <div className={styles.EducationCardTextHeading}>
                 <div className={styles.EducationCardTextHeadingTitle}>
@@ -360,8 +356,12 @@ export default function education() {
             </div>
           </div>
         </div>
-        <div className={styles.MainEducation} data-aos="fade-up" data-aos-duration="1000">
-          <div className={styles.EducationCardImg} >
+        <div
+          className={styles.MainEducation}
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <div className={styles.EducationCardImg}>
             <Image
               src="https://i.ibb.co/rxn1SX0/hiteclogo-1.jpg"
               alt="education"
@@ -369,7 +369,7 @@ export default function education() {
               height={200}
             />
           </div>
-          <div className={styles.EducationCard} >
+          <div className={styles.EducationCard}>
             <div className={styles.EducationCardText}>
               <div className={styles.EducationCardTextHeading}>
                 <div className={styles.EducationCardTextHeadingTitle}>
@@ -395,87 +395,59 @@ export default function education() {
       </section>
       <section data-aos="fade-up" data-aos-duration="1000">
         <div>
-          <h1
-            style={{
-              fontWeight: "550",
-              fontSmooth: "auto",
-              textAlign: "center",
-              fontSize: "2.65rem",
-              marginTop: "2.5rem",
-              color: "#fff",
-            }}
-          >
+          <h1 className="text-4xl font-semibold text-center pb-8">
             Certifications
           </h1>
         </div>
         <div className={styles.CardContainer}>
-            <Card css={{ w: "100%", h: "350px" }}>
-              <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-                <Col>
-                  <Text h4 color="white">
-                    The Complete 2023 Web Development Bootcamp
-                  </Text>
-                </Col>
-              </Card.Header>
-              <Card.Body
-                className={styles.CardBody}
-                css={{
-                  background: "linear-gradient(to right, #02aab0, #00cdac);",
-                }}
-              >
-                <Card.Image
-                  src="https://img-c.udemycdn.com/course/240x135/1565838_e54e_16.jpg"
-                  width="100%"
-                  height="100%"
-                  objectFit="contain"
-                  alt="Card example background"
-                  css={{ paddingTop: "50px" }}
-                />
-              </Card.Body>
-            </Card>
-            <Card css={{ w: "100%", h: "350px" }}>
-              <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-                <Col>
-                  <Text h3 color="black">
-                    Unreal Engine 5 C++ Developer
-                  </Text>
-                </Col>
-              </Card.Header>
-              <Card.Body className={styles.CardBody}>
-                <Card.Image
-                  src="https://img-c.udemycdn.com/course/240x135/657932_c7e0_6.jpg"
-                  width="100%"
-                  height="100%"
-                  objectFit="contain"
-                  alt="Card example background"
-                  css={{ paddingTop: "50px" }}
-                />
-              </Card.Body>
-            </Card>
-            <Card css={{ w: "100%", h: "350px" }}>
-              <Card.Header css={{ position: "absolute", zIndex: 1, top: 5 }}>
-                <Col>
-                  <Text h3 color="white">
-                    Intermediate Python
-                  </Text>
-                </Col>
-              </Card.Header>
-              <Card.Body
-                className={styles.CardBody}
-                css={{
-                  background: "linear-gradient(to right, #348f50, #56b4d3)",
-                }}
-              >
-                <Card.Image
-                  src="https://skillspot.co/wp-content/uploads/2021/02/Datacamp-Review-Logo.png"
-                  width="100%"
-                  height="100%"
-                  objectFit="contain"
-                  alt="Card example background"
-                  css={{ paddingTop: "50px" }}
-                />
-              </Card.Body>
-            </Card>
+          <Card className="w-100 bg-gradient-to-r from-blue-400 to-green-500">
+            <CardHeader>
+              <h4 className="text-white text-xl font-semibold">
+                The Complete 2023 Web Development Bootcamp
+              </h4>
+            </CardHeader>
+            <CardBody>
+              <Image
+                src="https://img-c.udemycdn.com/course/240x135/1565838_e54e_16.jpg"
+                width="100%"
+                height="100%"
+                objectFit="contain"
+                alt="Card example background"
+              />
+            </CardBody>
+          </Card>
+          <Card className="w-100 bg-gradient-to-r from-white to-blue-700">
+            <CardHeader>
+              <h3 className="text-slate-950 text-xl font-semibold">
+                Unreal Engine 5 C++ Developer
+              </h3>
+            </CardHeader>
+            <CardBody>
+              <Image
+                src="https://img-c.udemycdn.com/course/240x135/657932_c7e0_6.jpg"
+                width="100%"
+                height="100%"
+                objectFit="contain"
+                alt="Card example background"
+              />
+            </CardBody>
+          </Card>
+          <Card className="w-100 bg-gradient-to-r from-green-400 to-blue-500">
+            <CardHeader>
+              <h3 className="text-white text-xl font-semibold">
+                Intermediate Python
+              </h3>
+            </CardHeader>
+            <CardBody>
+              <Image
+                src="https://skillspot.co/wp-content/uploads/2021/02/Datacamp-Review-Logo.png"
+                width="100%"
+                height="100%"
+                objectFit="contain"
+                alt="Card example background"
+              />
+            </CardBody>
+          </Card>
         </div>
       </section>
     </>

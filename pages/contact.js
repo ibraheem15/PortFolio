@@ -1,14 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Input, Grid, Textarea, Button, Link } from "@nextui-org/react";
-import { motion } from "framer-motion";
+import { Input, Textarea, Button, Link } from "@nextui-org/react";
 import emailjs from "@emailjs/browser";
 
 //styles nextjs
 import styles from "../styles/Contact.module.css";
-
-// service_4ltsiaa
-// template_dxzb60y
-// Ra19KW-OtkVW7wcEX
 
 //components
 export default function contact() {
@@ -26,6 +21,12 @@ export default function contact() {
 
   const handleSubmit = (e) => {
     setLoading(true);
+    if(form.fname === "" || form.lname === "" || form.email === "" || form.phone === "" || form.message === ""){
+      alert("Please fill all the fields.");
+      setLoading(false);
+      return;
+    }
+
 
     emailjs
       .send(
@@ -883,51 +884,48 @@ export default function contact() {
           <form className={styles.Form}>
             <div className={styles.FormContainer}>
               <Input
-                bordered
-                labelPlaceholder="First Name"
-                color="default"
-                width="100%"
+                type="email"
+                variant="bordered"
+                label="First Name"
                 value={form.fname}
-                onChange={(e) => setForm({ ...form, fname: e.target.value })}
-                className={styles.Input}
+                onChange={(e) => setForm({ ...form, email: e.target.value })}
+                required
               />
               <Input
-                bordered
-                labelPlaceholder="Last Name"
-                color="default"
-                width="100%"
+                label="Last Name"
                 value={form.lname}
                 onChange={(e) => setForm({ ...form, lname: e.target.value })}
+                required
                 className={styles.Input}
+                variant="bordered"
               />
               <Input
-                bordered
-                labelPlaceholder="Email"
-                color="default"
-                width="100%"
+                label="Email"
+                variant="bordered"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
+                required
                 className={styles.Input}
               />
               <Input
-                bordered
-                labelPlaceholder="Phone Number"
-                color="default"
-                width="100%"
+                label="Phone Number"
+                variant="bordered"
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                required
                 className={styles.Input}
               />
               <Textarea
                 bordered
-                color="default"
-                labelPlaceholder="Message"
+                variant="bordered"
+                label="Message"
                 css={{
                   gridColumn: "1/-1",
                 }}
                 minRows={25}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
+                required
               />
             </div>
             <Button
@@ -936,6 +934,7 @@ export default function contact() {
               ghost
               className={styles.contactMe}
               onClick={handleSubmit}
+
             >
               Contact Me
             </Button>

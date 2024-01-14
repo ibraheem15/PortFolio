@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -16,18 +16,47 @@ export default function Navbarr() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { asPath } = useRouter();
 
+  // const menuItems = [
+  //   "Home",
+  //   "Education and Certifications",
+  //   "Projects",
+  //   "Contact Me",
+  // ];
+
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    {
+      name: "Home",
+      linkk: "/PortFolio",
+    },
+    {
+      name: "Education and Certifications",
+      linkk: "/PortFolio/education",
+    },
+    {
+      name: "Projects",
+      linkk: "/PortFolio/Projects",
+    },
+    {
+      name: "Contact Me",
+      linkk: "/PortFolio/contact",
+    },
   ];
+
+  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    handleResize(); // Initial size
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -68,7 +97,7 @@ export default function Navbarr() {
           </Link>
         </NavbarItem>
         <NavbarItem isActive={asPath === "/PortFolio/contact"}>
-          <Link href="contact" id="NavContact" color="foreground" id="NavCon">
+          <Link href="/PortFolio/contact" id="NavContact" color="foreground" id="NavCon">
             Contact Me
           </Link>
         </NavbarItem>
@@ -80,6 +109,7 @@ export default function Navbarr() {
             color="success"
             href="/PortFolio/M_Ibraheem_Rehman_Qazi_CV.pdf"
             variant="flat"
+            size={windowSize.width > 640 ? "md" : "sm"}
           >
             Download CV
           </Button>
@@ -97,10 +127,10 @@ export default function Navbarr() {
                   : "foreground"
               }
               className="w-full"
-              href="#"
+              href={item.linkk}
               size="lg"
             >
-              {item}
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
