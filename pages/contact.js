@@ -21,12 +21,17 @@ export default function contact() {
 
   const handleSubmit = (e) => {
     setLoading(true);
-    if(form.fname === "" || form.lname === "" || form.email === "" || form.phone === "" || form.message === ""){
+    if (
+      form.fname === "" ||
+      form.lname === "" ||
+      form.email === "" ||
+      form.phone === "" ||
+      form.message === ""
+    ) {
       alert("Please fill all the fields.");
       setLoading(false);
       return;
     }
-
 
     emailjs
       .send(
@@ -879,8 +884,10 @@ export default function contact() {
             </defs>
           </svg>
         </div>
-        <div className={styles.MainHeading}>
-          <h1>Get in Touch</h1>
+        <div className={styles.MainHeading + "lg:pb-48 w-full"}>
+          <h1 className="mt-10 lg:mb-10 text-4xl font-bold text-white text-center">
+            Get in Touch
+          </h1>
           <form className={styles.Form}>
             <div className={styles.FormContainer}>
               <Input
@@ -919,9 +926,7 @@ export default function contact() {
                 bordered
                 variant="bordered"
                 label="Message"
-                css={{
-                  gridColumn: "1/-1",
-                }}
+                className="col-span-2"
                 minRows={25}
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
@@ -934,7 +939,6 @@ export default function contact() {
               ghost
               className={styles.contactMe}
               onClick={handleSubmit}
-
             >
               Contact Me
             </Button>

@@ -45,6 +45,8 @@
 }
 
 .Form {
+  margin-top: 20px;
+  margin-bottom: 106px;
 }
 
 .textarea {
@@ -191,6 +193,7 @@
   .MainIcon {
     padding: 20px 20px;
     flex: auto;
+    max-width: 100%;
   }
   .MainHeading {
     font-size: 20px;
@@ -198,17 +201,14 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    max-width: 100%;
   }
 
   .svg {
     width: 100%;
     height: 100%;
   }
-  .MainIcon {
-    padding: 20px 20px;
-    flex: auto;
-    margin-right: 0px;
-  }
+
   .link_contactme {
     color: #ffffff;
     text-decoration: none;
@@ -228,6 +228,8 @@
   .Form {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
+    margin-bottom: 06px;
   }
   .textarea {
     width: 100%;
@@ -237,8 +239,8 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    width: 100%;
     padding: 2rem;
+    max-width: 100%;
   }
   .Input {
     grid-column: "1 / -1";
