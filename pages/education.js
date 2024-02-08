@@ -27,8 +27,8 @@ export default function education() {
             id="eb113788-f1f1-4c1f-be62-f1d0ea2e1eb6"
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            width="795.39431"
-            height="574.03802"
+            // width="795.39431"
+            // height="574.03802"
             viewBox="0 0 795.39431 574.03802"
             className={styles.HatIcon}
           >
@@ -441,6 +441,23 @@ export default function education() {
             <CardBody>
               <Image
                 src="https://skillspot.co/wp-content/uploads/2021/02/Datacamp-Review-Logo.png"
+                width="100%"
+                height="100%"
+                objectFit="contain"
+                alt="Card example background"
+              />
+            </CardBody>
+          </Card>
+          {/* AWS */}
+          <Card className="w-100 bg-gradient-to-r from-gray-500 to-orange-500">
+            <CardHeader>
+              <h3 className="text-white text-xl font-semibold">
+                AWS Certified Cloud Practitioner
+              </h3>
+            </CardHeader>
+            <CardBody>
+              <Image
+                src="https://www.webasha.com/uploads/course/images/633ad2b530ac21664799413.AWS-Practitioner-Training-and-certification.jpg"
                 width="100%"
                 height="100%"
                 objectFit="contain"

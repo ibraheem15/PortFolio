@@ -10,24 +10,25 @@ const service = [
     description: "I can create a Full Stack Website for you",
   },
   {
-    title: "C++ Development",
+    title: "Operating Systems",
     icon: "https://img.icons8.com/color/480/c-plus-plus-logo.png",
-    description: "I can create a program for you using C++",
+    description: "Development and Management of Operating Systems using C++",
   },
   {
-    title: "SQL Scripting",
+    title: "Manage Databases",
     icon: "https://img.icons8.com/external-soft-fill-juicy-fish/480/external-sql-servers-and-networks-soft-fill-soft-fill-juicy-fish.png",
-    description: "I can create a database for you using SQL",
+    description:
+      "Handle Database using SQL Server and MySQL to keep your data safe and secure",
   },
   {
-    title: "Java Development",
+    title: "Java Enterprise Applications",
     icon: "https://img.icons8.com/color/480/java-coffee-cup-logo--v1.png",
-    description: "I can create a program for you using Java",
+    description: "Using the popular Java EE environment to create applications",
   },
   {
-    title: "C# Learning",
+    title: "C# Applications",
     icon: "https://img.icons8.com/color/480/c-sharp-logo-2.png",
-    description: "I am currently learning C#",
+    description: "Create Windows Applications using C#",
   },
 ];
 
@@ -103,9 +104,7 @@ const AboutMe = () => {
       >
         Here is what I do!
       </motion.h1>
-      <motion.div
-        className={styles.cards}
-      >
+      <motion.div className={styles.cards}>
         {service.map((service, index) => (
           <Services key={service.title} index={index} {...service} />
         ))}

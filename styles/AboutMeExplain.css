@@ -158,16 +158,16 @@
   background-color: #27374d;
 }
 .slider .box2 {
-  background-color: #000050;
+  background-color: #3085c3;
 }
 .slider .box2 .illustration .inner {
-  background-color: #0003a1b1;
+  background-color: #2a6e9f;
 }
 .slider .box2 .illustration .inner::after,
 .slider .box2 .illustration .inner::before {
   /* background-color: rgba(0, 51, 255, 0.4); */
   /* 0002A1 */
-  background-color: rgba(0, 0, 161, 0.4);
+  background-color: rgba(0, 2, 161, 0.4);
 }
 .slider .box2 button {
   background-color: #0002a1;
@@ -191,19 +191,19 @@
   background-color: #3e6e93;
 }
 .slider .box4 {
-  background-color: #661515;
+  background-color: #424769;
 }
 .slider .box4 .illustration .inner {
-  background-color: #6a0d0d;
+  background-color: #5d6c98;
   z-index: 1;
 }
 .slider .box4 .illustration .inner::after,
 .slider .box4 .illustration .inner::before {
-  background-color: rgba(181, 10, 10, 0.4);
+  background-color: rgba(90, 98, 124, 0.4);
   z-index: 2;
 }
 .slider .box4 button {
-  background-color: #751616;
+  background-color: #8d98da;
 }
 .slider .box5 {
   background-color: #0e793b;
@@ -251,6 +251,7 @@
 .img1 {
   position: relative;
   z-index: 3;
+  border-radius: 30px;
 }
 @media only screen and (max-width: 800px) {
   .slider .illustration div {

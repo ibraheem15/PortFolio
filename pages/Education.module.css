@@ -4,9 +4,9 @@
   margin-bottom: 20px;
   text-align: center;
   justify-content: center;
-  width: 56rem;
+  max-width: 50svw;
   flex: 2;
-  padding-top: 11rem;
+  padding-top: 15svh;
   padding-left: 1rem;
   padding-right: 3rem;
 }
@@ -18,7 +18,13 @@
 
 .MainHatIcon {
   padding: 20px 50px;
+  padding-top: 5svh;
   flex: 1;
+}
+
+.HatIcon {
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 576px) {
@@ -37,7 +43,7 @@
   }
   .MainHeading {
     font-size: 20px;
-    padding-top: 2rem;
+    padding-top: 2svh;
     padding-left: 1rem;
     flex-wrap: wrap;
   }

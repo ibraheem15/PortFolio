@@ -41,8 +41,11 @@ const AboutMeExmplain = () => {
     const tl = gsap.timeline({
       defaults: { duration: 0.6, ease: "power2.inOut" },
     });
-    tl.from(".bg", { x: "-100%", opacity: 0 })
-      .from(".bka", { opacity: 0, y: "30px" }, "-=0.3");
+    tl.from(".bg", { x: "-100%", opacity: 0 }).from(
+      ".bka",
+      { opacity: 0, y: "30px" },
+      "-=0.3"
+    );
 
     const animate = () => tl.restart();
 
@@ -129,22 +132,22 @@ const AboutMeExmplain = () => {
               <h1 className="bka">Web Development</h1>
               <ul>
                 <li class="three">
-                  Develop highly interactive Front end / User Interfaces for
-                  your web applications
+                  Develop highly interactive Full Stack Web applications using
+                  React, Node, Express, and MongoDB
                 </li>
                 <li class="three">
-                  Building responsive website front end using ReactJS{" "}
+                  Building Responsive and User-Friendly Websites using
+                  React/NextJs
                 </li>
                 <li class="three">
-                  Build high-performance websites quickly and efficiently using
-                  Next Js
+                  Deploying websites on platforms like Vercel, Netlify, and AWS
                 </li>
                 <li class="three">
-                  Creating application backend in Node, Express
+                  Creating RESTful APIs and integrating them with the frontend
                 </li>
                 <li class="three">
-                  Integration of third party services such as Firebase/ Heroku/
-                  Vercel
+                  Using Zeustand for state management and Tailwind CSS for
+                  styling
                 </li>
               </ul>
               {/* <button>Check Now</button> */}
@@ -164,25 +167,27 @@ const AboutMeExmplain = () => {
           <div class="box2 box">
             <div class="bg"></div>
             <div class="details">
-              <h1 className="bka">C++ Programming</h1>
+              <h1 className="bka">Programming in C++ and Java</h1>
               <ul>
                 <li class="three">
-                  Developing Efficient and Scalable Applications
+                  Develop and Manage Operating Systems using C++
                 </li>
                 <li class="three">
-                  Create complex algorithms and data structures using C++.
+                  Use C++ to create, design, and manipulate C++ Applications
                 </li>
-                <li class="three">Develop games using OpenGL and SFML</li>
+                <li class="three">
+                  Develop Applications using JavaFX and Scene Builder for GUI
+                </li>
+                <li class="three">
+                  Maintain and update existing Java applications to support new
+                  features
+                </li>
               </ul>
-              {/* <button>Check Now</button> */}
             </div>
 
             <div class="illustration">
               <div class="inner">
-                <img
-                  className="img1"
-                  src="https://img.icons8.com/color/480/c-plus-plus-logo.png"
-                />
+                <img className="img1" src="https://i.ibb.co/LhG3qh7/JAVA.png" />
               </div>
             </div>
           </div>
@@ -190,7 +195,7 @@ const AboutMeExmplain = () => {
           <div class="box3 box">
             <div class="bg"></div>
             <div class="details">
-              <h1 className="bka">Sql Management</h1>
+              <h1 className="bka">Database Management</h1>
               <ul>
                 <li class="three"></li>
                 <li class="three">
@@ -206,7 +211,7 @@ const AboutMeExmplain = () => {
                 </li>
                 <li class="three">
                   ERD Diagrams and Normalization of Database Tables to ensure
-                  data integrity
+                  data integrity and security
                 </li>
               </ul>
               {/* <button>Check Now</button> */}
@@ -225,21 +230,19 @@ const AboutMeExmplain = () => {
           <div class="box4 box">
             <div class="bg"></div>
             <div class="details">
-              <h1 className="bka">Java Programming</h1>
+              <h1 className="bka">Software Designs</h1>
               <ul>
                 <li class="three">
-                  Use Java to create, design, and manipulate Java Applications
+                  Used IBM Rational Software Architect to create UML diagrams
+                  for Software Designs
                 </li>
                 <li class="three">
-                  Develop Applications using JavaFX and Scene Builder for GUI
+                  Create Use Case, Class, Sequence, and Activity Diagrams to
+                  ensure software integrity
                 </li>
                 <li class="three">
-                  Maintain and update existing Java applications to support new
-                  features
-                </li>
-                <li class="three">
-                  Manage Classes with Inheritance, Polymorphism, and
-                  Encapsulation to ensure data integrity
+                  Develop Project with Java EE environment to create Google
+                  Classroom like application
                 </li>
               </ul>
               {/* <button>Check Now</button> */}
@@ -248,8 +251,8 @@ const AboutMeExmplain = () => {
             <div class="illustration">
               <div class="inner">
                 <img
-                  className="img1"
-                  src="https://img.icons8.com/color/480/java-coffee-cup-logo--v1.png"
+                  className="img1 ml-10"
+                  src="https://img.icons8.com/ios/250/ibm.png"
                 />
               </div>
             </div>
@@ -258,25 +261,19 @@ const AboutMeExmplain = () => {
           <div class="box5 box">
             <div class="bg"></div>
             <div class="details">
-              <h1 className="bka">C# Programming</h1>
+              <h1 className="bka">C# Applications</h1>
               <ul>
                 <li class="three">
-                  Use C# to create, design, and manipulate C# Applications
+                  Develop Windows Applications using C# and .NET Framework
                 </li>
                 <li class="three">
-                  Develop Applications using Windows Forms and WPF for GUI
+                  Create and Design Windows Forms Applications using C#
                 </li>
                 <li class="three">
-                  Maintain and update existing C# applications to support new
-                  features
+                  Use ADO.NET to connect and manipulate databases with C#
                 </li>
                 <li class="three">
-                  Manage Classes with Inheritance, Polymorphism, and
-                  Encapsulation to ensure data integrity
-                </li>
-                <li class="three">
-                  Use Database First Approach to create C# Applications with SQL
-                  Server Database
+                  Develop and Manage Windows Services using C#
                 </li>
               </ul>
 

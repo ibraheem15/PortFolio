@@ -64,12 +64,69 @@ const projectsDetail = [
     description:
       "A Node.js and Express.js Application that allows residents to submit complaints and track their status. Admins can assign complaints to workers and track their progress.",
     icons: [
-      "https://p7.hiclipart.com/preview/306/37/167/node-js-javascript-web-application-express-js-computer-software-others.jpg",
+      "https://img.icons8.com/color/480/nodejs.png",
       "https://blog.amt.in/wp-content/uploads/2017/12/e16da876-c2fd-4eb8-ae72-4b193c534938-Edited.png",
       "https://img.icons8.com/color/480/mongodb.png",
       "https://img.icons8.com/color/480/javascript.png",
     ],
     link: "https://github.com/ibraheem15/Complaint-Portal-Website",
+  },
+  {
+    title: "E-Commerce Website",
+    description:
+      "A MERN Stack E-Commerce Website with features like user authentication, product search, add to cart, and payment integration.",
+    icons: [
+      "https://img.icons8.com/color/480/react-native.png",
+      "https://img.icons8.com/color/480/nodejs.png",
+      "https://img.icons8.com/color/480/mongodb.png",
+      "https://img.icons8.com/color/480/javascript.png",
+    ],
+    link: "https://baadesaba.studio",
+  },
+  {
+    title: "Tic Tac Toe Game",
+    description:
+      "A simple 2 player Tic Tac Toe game made using HTML, CSS and JavaScript.",
+    icons: [
+      "https://img.icons8.com/color/480/html-5.png",
+      "https://img.icons8.com/color/480/css3.png",
+      "https://img.icons8.com/color/480/javascript.png",
+    ],
+    link: "https://ibraheem15.github.io/Tic-Tac-Toe/",
+  },
+  {
+    title: "Quality Testing of Web Applications",
+    description:
+      "An academic project that involved testing the quality of a web application(typscript) using different testing techniques.",
+    icons: [
+      "https://img.icons8.com/color/480/typescript.png",
+      "https://img.icons8.com/external-tal-revivo-color-tal-revivo/80/external-jest-can-collect-code-coverage-information-from-entire-projects-logo-color-tal-revivo.png",
+      "https://img.icons8.com/ios/50/test--v1.png",
+    ],
+    link: "https://github.com/ibraheem15/SQE-Project",
+  },
+  {
+    title: "Tetris-PyGame",
+    description:
+      "A simple Tetris game made using Python and PyGame. It has features like score tracking and different levels.",
+    icons: [
+      "https://img.icons8.com/color/480/python.png",
+      "https://user-images.githubusercontent.com/46412508/170405943-e75458ec-6cb4-462e-91ba-43c861a3d6cf.png",
+    ],
+    link: "https://github.com/ibraheem15/Tetris-PyGame",
+  },
+  {
+    title: "Shortest Path Finder",
+    description:
+      "A Python application supported with PyGame that finds the shortest path between two points in a grid using the BFS algorithm.",
+    icons: [
+      "https://img.icons8.com/color/480/python.png",
+      "https://53c30e98.rocketcdn.me/wp-content/uploads/2023/03/bresdth-first-search.webp",
+      //google maps
+      "https://img.icons8.com/color/480/google-maps-new.png",
+      "https://user-images.githubusercontent.com/46412508/170405943-e75458ec-6cb4-462e-91ba-43c861a3d6cf.png",
+    ],
+    link: "https://github.com/ibraheem15/Shortest-Path-Finder",
   },
 ];
 
@@ -699,9 +756,7 @@ export default function Projects() {
           </svg>
         </div>
         <div className={styles.MainHeading}>
-          <h1
-            className="text-4xl font-bold text-center mb-5"
-          >Projects</h1>
+          <h1 className="text-4xl font-bold text-center mb-5">Projects</h1>
           <h5>
             My projects make use of a vast variety of latest technology tools.
             My best experience is to create React Projects, C# applications,
@@ -720,7 +775,10 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {projectsDetail.map((project, index) => (
             // 2c2c2c to 434343
-            <Card className="m-2 bg-gradient-to-r from-zinc-700 to-zinc-800" key={index}>
+            <Card
+              className="m-2 bg-gradient-to-r from-zinc-700 to-zinc-800"
+              key={index}
+            >
               <CardHeader className="flex justify-between ml-2 mt-2">
                 <div className="flex">
                   <p className="text-2xl font-bold">{project.title}</p>
@@ -756,7 +814,7 @@ export default function Projects() {
               </CardBody>
               <CardFooter className="pb-4">
                 <Link icon color="primary" target="_blank" href={project.link}>
-                  Visit source code on GitHub.
+                  Link to Project
                 </Link>
               </CardFooter>
             </Card>

@@ -87,10 +87,7 @@ export default function contact() {
         <div className={styles.MainIcon}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="785"
-            height="589"
             viewBox="0 0 785 589"
-            fill="none"
             className={styles.svg}
           >
             <path
@@ -884,8 +881,8 @@ export default function contact() {
             </defs>
           </svg>
         </div>
-        <div className={styles.MainHeading + "lg:pb-48 w-full"}>
-          <h1 className="mt-10 lg:mb-10 text-4xl font-bold text-white text-center">
+        <div className={styles.MainHeading}>
+          <h1 className="text-4xl font-bold text-white text-center">
             Get in Touch
           </h1>
           <form className={styles.Form}>

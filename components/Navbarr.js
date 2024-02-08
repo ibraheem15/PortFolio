@@ -16,13 +16,6 @@ export default function Navbarr() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { asPath } = useRouter();
 
-  // const menuItems = [
-  //   "Home",
-  //   "Education and Certifications",
-  //   "Projects",
-  //   "Contact Me",
-  // ];
-
   const menuItems = [
     {
       name: "Home",
@@ -66,7 +59,7 @@ export default function Navbarr() {
           className="sm:hidden"
         />
         <NavbarBrand justify="start">
-          <Link href="/" color="success">
+          <Link href="/PortFolio" color="success">
             Ibraheem.Rehman();
           </Link>
         </NavbarBrand>

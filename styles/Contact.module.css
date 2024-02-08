@@ -1,21 +1,25 @@
 .MainHeading {
-  flex: 2;
   font-size: 30px;
   color: #ffffff;
-  text-align: left;
-  margin-top: 20px;
-  justify-content: left;
-  flex-basis: 0%;
+  margin-bottom: 20px;
+  text-align: center;
+  justify-content: center;
+  flex: 2;
+  padding-top: 10svh;
+  margin-left: 12svw;
+  padding-right: 3rem;
+  max-width: 800px;
 }
 
 .svg {
-  width: 76%;
+  width: 180%;
   height: 100%;
 }
 
 .MainIcon {
-  padding: 70px 80px;
-  margin-right: -100px;
+  padding: 20px 50px;
+  max-width: 50svw;
+  flex: 1;
 }
 
 .FirstView {
@@ -61,7 +65,15 @@
   width: 45rem;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1400px) {
+  .MainHeading {
+    margin-left: 25svw;
+  }
+  .MainIcon {
+  }
+}
+
+@media (max-width: 1025px) {
   .MainHeading {
     font-size: 20px;
     padding-top: 2rem;
@@ -238,8 +250,8 @@
   .FormContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
     padding: 2rem;
+    margin-top: 0px;
     max-width: 100%;
   }
   .Input {

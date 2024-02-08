@@ -5,7 +5,7 @@
   text-align: center;
   justify-content: center;
   flex: 2;
-  padding-top: 11rem;
+  padding-top: 15svh;
   padding-right: 3rem;
   margin-left: 19rem;
   max-width: 800px;
@@ -20,11 +20,20 @@
 .MainIcon {
   padding: 20px 50px;
   flex: 1;
+  max-width: 40svw;
+  padding-top: 10svh;
+  padding-bottom: 5svw;
 }
 
 .svg {
   width: 180%;
   height: 100%;
+}
+
+@media (min-width: 1400px) {
+  .MainHeading {
+    margin-top: 10svh;
+  }
 }
 
 @media (max-width: 1024px) {
