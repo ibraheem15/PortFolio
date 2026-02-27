@@ -51,7 +51,9 @@ jobs:
           fi
 
       - name: Build with Vite
-        run: pnpm run build -- --base="${{ steps.base-path.outputs.value }}"
+        run: |
+          pnpm exec tsc -b
+          pnpm exec vite build --base="${{ steps.base-path.outputs.value }}"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v4
