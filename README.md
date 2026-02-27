@@ -1,84 +1,137 @@
-# Portfolio
+# M Ibraheem Rehman Qazi - Portfolio
 
-## Description
+Full Stack AI, Cloud, and Java Engineer focused on building scalable SaaS platforms, high-performance backend systems, and production-ready MLOps workflows.
 
-I'm thrilled to showcase my latest project—a stunning portfolio created using Next.js, Tailwind CSS, and my first-ever venture into the world of Three.js! It showcases my web development skills and incorporates 3D elements. The portfolio is designed to be visually appealing, responsive, and optimized for performance.
+- GitHub: [github.com/ibraheem15](https://github.com/ibraheem15)
+- LinkedIn: [linkedin.com/in/ibraheem-rehman](https://linkedin.com/in/ibraheem-rehman)
+- Email: [ibraheemwork15@gmail.com](mailto:ibraheemwork15@gmail.com)
 
-Next.js was chosen because of its exceptional performance, scalability, and smooth integration with React. Moreover, Next.js's dynamic routing system allowed me to organize my project efficiently and maintain clean code architecture.
+## Summary
 
-For me, the introduction of Three.js was an interesting learning experience. I added immersive 3D features to my portfolio by utilizing this powerful JavaScript package. I built dynamic animations, provided fascinating visual effects, and showcased my creativity in an engaging manner using Three.js.
+Software Engineer specializing in:
 
-## Table of Contents
+- Cloud infrastructure on AWS (EKS, EC2, IAM, CloudWatch, S3)
+- Backend systems with Node.js, Java, Redis, PostgreSQL, and REST APIs
+- MLOps and applied AI including training pipelines, Hugging Face deployment, and LLM integration
+- Frontend engineering with React, TypeScript, Vite, and Tailwind CSS
 
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Getting Started](#getting-started)
-  - [Installation](#installation)
-  - [Usage](#usage)
-- [Demo](#demo)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+I focus on bridging application development and infrastructure, with strong emphasis on CI/CD, observability, and reliability.
 
-## Features
+## Technical Skills
 
-- A visually appealing and responsive portfolio.
-- Integration of Three.js to add immersive 3D elements and animations.
-- Utilization of Next.js for exceptional performance and smooth React integration.
-- Clean code architecture and efficient organization with Next.js's dynamic routing system.
-- Optimized for performance to ensure fast loading times and smooth user experience.
+- Cloud & DevOps: AWS, Kubernetes, Karpenter, Docker, Terraform, GitHub Actions, Tailscale
+- Backend & Data: Java, Spring Boot, Node.js, Redis (Queues/PubSub), PostgreSQL, MongoDB, Supabase
+- MLOps & AI: Model training pipelines, automated retraining, spam detection systems, LLM integration
+- Frontend: React, TypeScript, TanStack Query, Vite, Tailwind CSS, shadcn/ui
 
-## Technologies Used
+## Professional Experience
 
-- Next.js: [https://nextjs.org/](https://nextjs.org/)
-- Tailwind CSS: [https://tailwindcss.com/](https://tailwindcss.com/)
-- Three.js: [https://threejs.org/](https://threejs.org/)
+### VECTOR - Islamabad, Pakistan
+**Full Stack Software, Cloud & Java Engineer (Full-time)**  
+September 2025 - Present
 
-## Getting Started
+- Architected a production-grade AWS EKS cluster with Karpenter for just-in-time node provisioning and cost optimization.
+- Engineered event-driven backend workflows using Node.js and Redis queues for AI processing and orchestration.
+- Implemented security and observability practices with IAM least-privilege and centralized monitoring/logging.
 
-### Installation
+### HEXLER TECH - Islamabad, Pakistan
+**Full Stack Engineer (Web & App) (Full-time)**  
+June 2025 - August 2025
 
-1. Clone the repository:
+- Developed the NSTP Incubator Portal (MERN) supporting 100+ startups and complex role-based operations.
+- Built an AI-driven React Native app with speech-to-text, LLM summarization, and Supabase real-time sync.
+
+### XFLOW RESEARCH - Islamabad, Pakistan
+**Software Engineer (Apprenticeship)**  
+June 2024 - April 2025
+
+- Led Docker containerization of legacy VoIP products, reducing setup time by 40%.
+- Contributed to open-source SIP/RTP communication protocols and legacy telecom integrations.
+
+### SALESFLO - Karachi, Pakistan
+**Web Developer (Internship)**  
+June 2023 - August 2023
+
+- Supported redesign and UI feature development for internal core applications.
+- Delivered 30+ UI improvements that increased product usability.
+
+## Featured Projects
+
+### AI Spam Detection System
+**Dec 2025 - Jan 2026**  
+[github.com/ibraheem15/Spam-detection-api](https://github.com/ibraheem15/Spam-detection-api)
+
+- Browser extension + API for spam detection in Fiverr messages.
+- Automated CI/CD with Docker layer caching and deployment to Hugging Face Spaces.
+- Designed a feedback-loop retraining pipeline for continuous model improvement.
+
+### Self-Hosted Homelab Ecosystem
+**Always Ongoing**  
+[github.com/ibraheem15/Ibraheem-HomeLab-Server](https://github.com/ibraheem15/Ibraheem-HomeLab-Server)
+
+- Built a private cloud setup with Immich, FileBrowser, and Pi-hole.
+- Configured secure remote networking via Tailscale and automated backup workflows.
+
+### BaadeSaba Web App
+**Nov 2023 - Dec 2023**  
+[baadesaba.org](https://www.baadesaba.org)
+
+- Launched and scaled an e-commerce platform to 5,000+ monthly users.
+- Containerized and deployed to AWS to improve portability and availability.
+
+### BaadeSaba Backend Migration (Java)
+**Recent Update**  
+[github.com/ibraheem15/BaadeSaba-Java-Backend](https://github.com/ibraheem15/BaadeSaba-Java-Backend)
+
+- Migrated backend services from Node.js to Java.
+- Improved API structure, maintainability, and long-term scalability.
+
+## Education
+
+**National University of Computer and Emerging Sciences (FAST), Islamabad**  
+Bachelor of Software Engineering (2021 - 2025)
+
+Relevant coursework:
+OOP, Data Structures, Operating Systems, Web Engineering, Software Architecture, Information Security, DevOps, MLOps, Software Quality.
+
+## Leadership & Engagement
+
+- Coordinator, NASCON 2023: managed SE Quiz operations for 200+ participants.
+- Member, IEEE (FAST): maintained standards in 50+ CS publications and flagged quality discrepancies.
+- Member, FAST Data Science Society (2022 - 2023): organized seminars and represented university at NASCON.
+
+## Additional Information
+
+- Languages: English, Urdu, Basic German
+- Certification: AWS Cloud Practitioner
+
+## Project Setup
+
+### Prerequisites
+
+- Node.js 20+
+- pnpm 10+
+
+### Install
 
 ```bash
-git clone https://github.com/your-username/stunning-portfolio.git
-cd stunning-portfolio
+pnpm install
 ```
 
-2. Install dependencies:
+### Run locally
 
 ```bash
-npm install
+pnpm dev
 ```
 
-### Usage
-
-1. Run the development server:
+### Build
 
 ```bash
-npm run dev
+pnpm build
 ```
 
-2. Access the portfolio in your web browser at `http://localhost:3000`.
+### Preview production build
 
-## Demo
-
-A live demo of the portfolio can be accessed at [https://ibraheem15.github.io/PortFolio/](https://ibraheem15.github.io/PortFolio/).
-
-## Contributing
-
-If you'd like to contribute to this project, you can follow the steps below:
-
-1. Fork the repository.
-2. Create a new branch for your changes: `git checkout -b feature/your-feature`.
-3. Commit your changes: `git commit -m "Add your feature"`.
-4. Push to the branch: `git push origin feature/your-feature`.
-5. Submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
-## Contact
-
-If you have any questions or feedback regarding the project, feel free to contact me on my LinkedIn
+```bash
+pnpm preview
+```
