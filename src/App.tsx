@@ -306,11 +306,11 @@ export function App() {
 
             <div className="grid gap-6 sm:grid-cols-3">
               <div>
-                <p className="text-5xl font-semibold">03+</p>
+                <p className="text-5xl font-semibold">02+</p>
                 <p className="text-black/65">Years building production software</p>
               </div>
               <div>
-                <p className="text-5xl font-semibold">15+</p>
+                <p className="text-5xl font-semibold">05+</p>
                 <p className="text-black/65">Cloud and AI projects delivered</p>
               </div>
               <div>
