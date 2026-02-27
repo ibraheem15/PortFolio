@@ -44,11 +44,10 @@ jobs:
         id: base-path
         run: |
           REPO_NAME="${GITHUB_REPOSITORY#*/}"
-          REPO_NAME_LOWER="$(echo "$REPO_NAME" | tr '[:upper:]' '[:lower:]')"
-          if [[ "$REPO_NAME_LOWER" == *.github.io ]]; then
+          if [[ "$REPO_NAME" == *.github.io ]]; then
             echo "value=/" >> "$GITHUB_OUTPUT"
           else
-            echo "value=/$REPO_NAME_LOWER/" >> "$GITHUB_OUTPUT"
+            echo "value=/$REPO_NAME/" >> "$GITHUB_OUTPUT"
           fi
 
       - name: Build with Vite
