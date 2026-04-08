@@ -2,8 +2,6 @@ import {
   ArrowRight,
   Download,
   ExternalLink,
-  Github,
-  Linkedin,
   Mail,
   Phone,
 } from "lucide-react"
@@ -248,7 +246,7 @@ export function App() {
               target="_blank"
               rel="noreferrer"
             >
-              <Github className="size-4" />
+              <ExternalLink className="size-4" />
               github.com/ibraheem15
             </a>
             <a
@@ -257,7 +255,7 @@ export function App() {
               target="_blank"
               rel="noreferrer"
             >
-              <Linkedin className="size-4" />
+              <ExternalLink className="size-4" />
               linkedin.com/in/ibraheem-rehman
             </a>
             <p className="inline-flex items-center gap-2 text-black/70">
@@ -529,7 +527,7 @@ export function App() {
                 rel="noreferrer"
               >
                 <p className="inline-flex items-center gap-3 text-xl font-semibold md:text-2xl">
-                  <Linkedin className="size-5 text-[#4A70A9]" />
+                  <ExternalLink className="size-5 text-[#4A70A9]" />
                   Connect on LinkedIn
                 </p>
                 <p className="mt-2 text-sm text-black/55 group-hover:text-black/70">
