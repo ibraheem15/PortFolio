@@ -16,6 +16,7 @@ import ResumePdf from "./assets/M Ibraheem Rehman Qazi - CV.pdf"
 import BaadeSaba from "./assets/BaadeSaba.png"
 import Server from "./assets/Server-1.png"
 import SpamDetection from "./assets/Spam-Detect.jpeg"
+import BehaviourLens from "./assets/behaviourlens-logo.png"
 
 type Experience = {
   period: string
@@ -110,6 +111,15 @@ const leadership = [
 ]
 
 const projects: Project[] = [
+  {
+    title: "BehaviourLens API",
+    timeline: "2026 - Ongoing",
+    client: "AI Product Backend",
+    description:
+      "Java/Spring Boot backend for animal behaviour video interpretation, built with DDD, hexagonal architecture, JWT auth, OpenAI vision, PostgreSQL/S3, OpenAPI, and MCP endpoints.",
+    image: BehaviourLens,
+    link: "https://github.com/ibraheem15/Behaviourlens-Api",
+  },
   {
     title: "AI Spam Detection System",
     timeline: "Dec 2025 - Jan 2026",
@@ -459,7 +469,7 @@ export function App() {
                 <img
                   src={project.image}
                   alt={`${project.title} preview`}
-                  className="h-56 w-full object-cover"
+                  className="h-70 w-full object-cover"
                 />
               ) : (
                 <div
